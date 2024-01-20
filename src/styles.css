@@ -6,3 +6,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.header {
+    background-color: rgba(22, 22, 23, 0.8);
+}
