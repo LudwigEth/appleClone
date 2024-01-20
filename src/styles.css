@@ -19,6 +19,7 @@ body {
 .navbar {
     max-width: 64rem;
     padding: 0 1.375rem;
+    margin: 0 auto;
 }
 
 .navbar .navbar-items {
