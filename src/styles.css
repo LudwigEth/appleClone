@@ -12,5 +12,19 @@ body {
 }
 
 .navbar {
-    max-width: 1024px;
+    max-width: 64rem;
+    padding: 0 1.375rem;
+}
+
+.navbar .navbar-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-item-svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: rgba(255, 255, 255, 0.8);
 }
