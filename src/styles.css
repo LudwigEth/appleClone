@@ -34,6 +34,7 @@ a:hover {
 
 .main {
     position: absolute;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     top: 0;
