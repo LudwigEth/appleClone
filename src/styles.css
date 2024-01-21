@@ -70,3 +70,12 @@ body {
     background-position: center;
     background-size: 66.75rem 38.5rem;
 }
+
+#section-promo-vision-pro-title {
+    height: 3rem;
+    width: 100%;
+    background-image: url('./assets/images/promoVisionProLogo.png');
+    background-size: auto 3rem;
+    background-repeat: no-repeat;
+    background-position: top;
+}
