@@ -12,6 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: system-ui;
+    letter-spacing: 0.005rem;
 }
 
 a {
