@@ -103,19 +103,15 @@ a:hover {
     padding: 3.3125rem 0 2.75rem 0;
 }
 
-.section-promo-text-wrapper h2 {
-    font-size: 1.5rem;
-    font-weight: 300;
-}
-
-.section-promo-text-wrapper h3,
-.section-promo-text-wrapper a {
-    font-size: 1.125rem;
-    font-weight: 300;
+.section-promo-title {
+    font-size: 3rem;
+    font-weight: 600;
 }
 
 .section-promo-subtitle {
     margin-top: 0.25rem;
+    font-size: 1.5rem;
+    font-weight: 400;
     line-height: 1.75rem;
 }
 
