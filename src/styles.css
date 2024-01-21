@@ -61,6 +61,7 @@ body {
 }
 
 #section-promo-vision-pro {
+    align-items: flex-end;
     height: 38.5rem;
     width: 66.75rem;
     margin-top: -0.25rem;
