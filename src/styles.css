@@ -23,6 +23,8 @@ body {
     display: flex;
     flex-direction: column;
     top: 0;
+    width: 100%;
+    overflow: hidden;
 }
 
 .navbar {
