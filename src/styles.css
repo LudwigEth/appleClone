@@ -215,3 +215,16 @@ a:hover {
     color: var(--link-color-blue2);
     text-decoration-color: var(--link-color-blue2);
 }
+
+#section-promo-iphone15 {
+    background-image: url('./assets/images/promoIphone15.jpg');
+    background-repeat: no-repeat;
+    background-size: 66.75rem 38.5rem;
+    background-position: center;
+    z-index: 40;
+}
+
+#section-promo-iphone15 .section-promo-link {
+    color: var(--link-color-blue1);
+    text-decoration-color: var(--link-color-blue1);
+}
