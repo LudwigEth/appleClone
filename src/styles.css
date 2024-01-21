@@ -128,16 +128,69 @@ a:hover {
     align-items: center;
     justify-content: center;
     margin-top: 0.9375rem;
-    gap: 2.35rem;
+    gap: 3.25rem;
     line-height: 1.4375rem;
+    font-size: 1.1875rem;
     font-weight: 300;
 }
 
+.section-promo-link-group > a {
+    position: relative;
+    text-align: center;
+}
+
 .section-promo-link-group > a::after {
-    height: 1.4375rem;
+    position: absolute;
+    right: -1rem;
     width: 0.54rem;
     font-family: 'FontAwesome';
     content: '\f054';
-    font-size: 0.75rem;
-    padding-left: 0.35625rem;
+    font-size: 0.7rem;
+    line-height: 1.65rem;
+}
+
+#section-promo-vision-pro {
+    align-items: flex-end;
+    height: 38.5rem;
+    width: 66.75rem;
+    margin-top: -0.25rem;
+    background-image: url('./assets/images/promoVisionPro.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 66.75rem 38.5rem;
+    z-index: 42;
+}
+
+#section-promo-vision-pro h2 {
+    font-weight: 300;
+}
+
+#section-promo-vision-pro h3 {
+    font-size: 1.125rem;
+}
+
+#section-promo-vision-pro .section-promo-link-group {
+    margin-left: -0.75rem;
+    font-size: 1.125rem;
+}
+
+#section-promo-vision-pro-title {
+    height: 3rem;
+    width: 100%;
+    background-image: url('./assets/images/promoVisionProLogo.png');
+    background-size: auto 3rem;
+    background-repeat: no-repeat;
+    background-position: top;
+    line-height: 3.25rem;
+}
+
+#section-promo-iphone15-pro {
+    height: 38.5rem;
+    width: 66.75rem;
+    background-image: url('./assets/images/promoIphone15Pro.jpg');
+    background-repeat: no-repeat;
+    background-size: 66.75rem 38.5rem;
+    background-position: center;
+    background-position-y: 20%;
+    z-index: 41;
 }
