@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif, system-ui;
+    font-family: system-ui;
 }
 
 a {
@@ -106,11 +106,13 @@ a:hover {
 
 .section-promo-text-wrapper h2 {
     font-size: 1.5rem;
+    font-weight: 300;
 }
 
 .section-promo-text-wrapper h3,
 .section-promo-text-wrapper a {
-    font-size: 1.1875rem;
+    font-size: 1.125rem;
+    font-weight: 300;
 }
 
 .section-promo-subtitle {
@@ -121,6 +123,7 @@ a:hover {
 .section-promo-aside {
     margin-top: 0.875rem;
     line-height: 1.4375rem;
+    font-size: 1.1875rem;
 }
 
 .section-promo-link-group {
@@ -130,11 +133,14 @@ a:hover {
     margin-top: 0.9375rem;
     gap: 2rem;
     line-height: 1.4375rem;
+    font-weight: 300;
 }
 
 .section-promo-link-group > a::after {
+    height: 1.4375rem;
+    width: 0.54rem;
     font-family: 'FontAwesome';
     content: '\f054';
-    font-size: 0.65rem;
-    padding-left: 0.3125rem;
+    font-size: 0.75rem;
+    padding-left: 0.35625rem;
 }
