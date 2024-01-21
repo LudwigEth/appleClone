@@ -49,3 +49,13 @@ body {
     display: flex;
     justify-content: center;
 }
+
+#section-promo-vision-pro {
+    height: 38.5rem;
+    width: 66.75rem;
+    margin-top: -0.25rem;
+    background-image: url('./assets/images/promoVisionPro.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 66.75rem 38.5rem;
+}
