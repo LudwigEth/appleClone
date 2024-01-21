@@ -1,7 +1,8 @@
 @import './reset.css';
 
 :root {
-    --link-color: rgb(0, 102, 204);
+    --link-color-blue1: rgb(0, 102, 204);
+    --link-color-blue2: rgb(41, 151, 255);
     --text-gray: rgb(110, 110, 115);
     --text-white: rgb(245, 245, 247);
 }
@@ -19,7 +20,6 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--link-color);
 }
 
 a:hover {
@@ -174,6 +174,11 @@ a:hover {
     font-size: 1.125rem;
 }
 
+#section-promo-vision-pro .section-promo-link {
+    color: var(--link-color-blue1);
+    text-decoration-color: var(--link-color-blue1);
+}
+
 #section-promo-vision-pro-title {
     height: 3rem;
     width: 100%;
@@ -193,4 +198,9 @@ a:hover {
     background-position: center;
     background-position-y: 20%;
     z-index: 41;
+}
+
+#section-promo-iphone15-pro .section-promo-link {
+    color: var(--link-color-blue2);
+    text-decoration-color: var(--link-color-blue2);
 }
