@@ -26,6 +26,10 @@ a:hover {
     text-decoration: underline;
 }
 
+.text-white {
+    color: var(--text-white);
+}
+
 .header {
     width: 100%;
     position: fixed;
