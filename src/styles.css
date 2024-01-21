@@ -2,6 +2,8 @@
 
 :root {
     --link-color: rgb(0, 102, 204);
+    --text-gray: rgb(110, 110, 115);
+    --text-white: rgb(245, 245, 247);
 }
 
 body {
