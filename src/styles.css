@@ -44,3 +44,8 @@ body {
     padding: 0 0.5rem;
     fill: rgba(255, 255, 255, 0.8);
 }
+
+.section-promo {
+    display: flex;
+    justify-content: center;
+}
