@@ -83,10 +83,26 @@ a:hover {
     background-color: #ffffff;
     height: 39rem;
     overflow: hidden;
+    z-index: 42;
+}
+
+.section-promo:nth-child(2),
+.section-promo:nth-child(3) {
+    margin-top: -3.5rem;
+    height: 39.25rem;
+}
+
+.section-promo:nth-child(2) {
+    z-index: 41;
+}
+
+.section-promo:nth-child(3) {
+    z-index: 40;
 }
 
 .section-promo-item {
-    margin-top: -3.5rem;
+    height: 38.5rem;
+    width: 66.75rem;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -105,13 +121,13 @@ a:hover {
 
 .section-promo-title {
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .section-promo-subtitle {
     margin-top: 0.25rem;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.75rem;
 }
 
@@ -151,8 +167,6 @@ a:hover {
 
 #section-promo-vision-pro {
     align-items: flex-end;
-    height: 38.5rem;
-    width: 66.75rem;
     margin-top: -0.25rem;
     background-image: url('./assets/images/promoVisionPro.jpg');
     background-repeat: no-repeat;
@@ -190,13 +204,10 @@ a:hover {
 }
 
 #section-promo-iphone15-pro {
-    height: 38.5rem;
-    width: 66.75rem;
     background-image: url('./assets/images/promoIphone15Pro.jpg');
     background-repeat: no-repeat;
     background-size: 66.75rem 38.5rem;
     background-position: center;
-    background-position-y: 20%;
     z-index: 41;
 }
 
