@@ -53,6 +53,13 @@ body {
     justify-content: center;
 }
 
+.section-promo-item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
 #section-promo-vision-pro {
     height: 38.5rem;
     width: 66.75rem;
