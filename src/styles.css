@@ -269,6 +269,18 @@ a:hover {
     font-size: 1.15625rem;
     font-weight: 300;
     margin-top: 0.25rem;
+    line-height: 1.4375rem;
+}
+
+.grid-item-link-group > a {
+    margin-left: -0.75rem;
+    font-size: 1.0625rem;
+    color: var(--link-color-blue1);
+}
+
+.grid-item:nth-child(1) .grid-item-link,
+.grid-item:nth-child(2) .grid-item-link {
+    color: var(--link-color-blue2);
 }
 
 .grid-item-content-wrapper,
