@@ -273,7 +273,6 @@ a:hover {
 }
 
 .grid-item-link-group > a {
-    margin-left: -0.75rem;
     font-size: 1.0625rem;
     color: var(--link-color-blue1);
 }
