@@ -302,8 +302,8 @@ a:hover {
 
 .grid-item:nth-child(3) .grid-item-title {
     background-image: url('./assets/images/grid-images/grid-item-3-title-medium.png');
-    background-size: auto 1.6875rem;
-    height: 1.6875rem;
+    background-size: auto 2.625rem;
+    height: 2.625rem;
 }
 
 .grid-item:nth-child(4) > .grid-item-content-wrapper {
