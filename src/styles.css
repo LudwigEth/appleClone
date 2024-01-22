@@ -234,3 +234,9 @@ a:hover {
 }
 
 /* grid container and grid items */
+
+.container-grid {
+    display: grid;
+    gap: 0.75rem;
+    padding: 0.75rem;
+}
