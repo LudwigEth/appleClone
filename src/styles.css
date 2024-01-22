@@ -312,6 +312,12 @@ a:hover {
     height: 34.375rem;
 }
 
+.grid-item:nth-child(4) .grid-item-title {
+    height: 2.25rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
 .grid-item:nth-child(5) > .grid-item-content-wrapper {
     background-image: url('./assets/images/grid-images/grid-item-5-medium.jpg');
     background-size: 32.25rem 30.625rem;
