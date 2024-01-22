@@ -165,7 +165,7 @@ a:hover {
 .section-promo-link-group > a::after,
 .grid-item-link-group > a::after {
     position: absolute;
-    right: -1rem;
+    right: -0.75rem;
     width: 0.54rem;
     font-family: 'FontAwesome';
     content: '\f054';
