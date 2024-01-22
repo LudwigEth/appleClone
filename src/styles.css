@@ -258,6 +258,7 @@ a:hover {
 .grid-item-content-wrapper {
     padding-top: 2.75rem;
     top: -2.75rem;
+    margin-bottom: -2.75rem;
 }
 
 .grid-item-title {
