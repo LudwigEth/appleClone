@@ -102,6 +102,7 @@ a:hover {
 
 .section-promo:nth-child(3) {
     z-index: 40;
+    margin-bottom: -3.75rem;
 }
 
 .section-promo-item {
