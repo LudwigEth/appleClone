@@ -266,7 +266,7 @@ a:hover {
 }
 
 .grid-item-subtitle {
-    font-size: 1.1875rem;
+    font-size: 1.125rem;
     font-weight: 300;
     margin-top: 0.25rem;
 }
@@ -304,6 +304,7 @@ a:hover {
     background-image: url('./assets/images/grid-images/grid-item-2-title-medium.png');
     background-size: auto 2.625rem;
     height: 2.625rem;
+    margin-top: 3.375rem;
 }
 
 .grid-item:nth-child(2) .grid-item-subtitle {
@@ -321,6 +322,7 @@ a:hover {
     background-image: url('./assets/images/grid-images/grid-item-3-title-medium.png');
     background-size: auto 2.625rem;
     height: 2.625rem;
+    margin-top: 3.375rem;
 }
 
 .grid-item:nth-child(3) .grid-item-subtitle {
