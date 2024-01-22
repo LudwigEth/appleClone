@@ -247,6 +247,8 @@ a:hover {
     flex-direction: column;
 }
 
+/* media queries */
+
 @media (min-width: 735px) {
     .container-grid {
         grid-template-columns: repeat(2, minmax(21.375rem, 1fr));
