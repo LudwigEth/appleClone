@@ -272,6 +272,10 @@ a:hover {
     line-height: 1.4375rem;
 }
 
+.grid-item-link-group {
+    gap: 2rem;
+}
+
 .grid-item-link-group > a {
     font-size: 1.0625rem;
     color: var(--link-color-blue1);
