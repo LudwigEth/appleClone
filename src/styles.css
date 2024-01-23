@@ -106,11 +106,8 @@ a:hover {
 }
 
 .section-promo-item {
-    height: 38.5rem;
-    width: 66.75rem;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     width: 100%;
 }
 
@@ -121,7 +118,6 @@ a:hover {
     align-items: center;
     text-align: center;
     width: 100%;
-    padding: 3.3125rem 0 2.75rem 0;
 }
 
 .section-promo-title {
@@ -173,30 +169,21 @@ a:hover {
     line-height: 1.65rem;
 }
 
-#section-promo-vision-pro {
+.section-promo:nth-child(1) .section-promo-item {
     align-items: flex-end;
-    margin-top: -0.25rem;
-    background-image: url('./assets/images/promo-images/promoVisionPro.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 66.75rem 38.5rem;
+    font-size: 1.125rem;
     z-index: 42;
 }
 
-#section-promo-vision-pro h2 {
+.section-promo:nth-child(1) h2 {
     font-weight: 300;
 }
 
-#section-promo-vision-pro h3 {
+.section-promo:nth-child(1) h3 {
     font-size: 1.125rem;
 }
 
-#section-promo-vision-pro {
-    margin-left: -0.75rem;
-    font-size: 1.125rem;
-}
-
-#section-promo-vision-pro .section-promo-link {
+.section-promo:nth-child(1) .section-promo-link {
     color: var(--link-color-blue1);
     text-decoration-color: var(--link-color-blue1);
 }
@@ -204,35 +191,26 @@ a:hover {
 #section-promo-vision-pro-title {
     height: 3rem;
     width: 100%;
-    background-image: url('./assets/images/promo-images/promoVisionProLogo.png');
     background-size: auto 3rem;
     background-repeat: no-repeat;
     background-position: top;
     line-height: 3.25rem;
 }
 
-#section-promo-iphone15-pro {
-    background-image: url('./assets/images/promo-images/promoIphone15Pro.jpg');
-    background-repeat: no-repeat;
-    background-size: 66.75rem 38.5rem;
-    background-position: center;
+.section-promo:nth-child(2) .section-promo-item {
     z-index: 41;
 }
 
-#section-promo-iphone15-pro .section-promo-link {
+.section-promo:nth-child(2) .section-promo-link {
     color: var(--link-color-blue2);
     text-decoration-color: var(--link-color-blue2);
 }
 
-#section-promo-iphone15 {
-    background-image: url('./assets/images/promo-images/promoIphone15.jpg');
-    background-repeat: no-repeat;
-    background-size: 66.75rem 38.5rem;
-    background-position: center;
+.section-promo:nth-child(3) .section-promo-item {
     z-index: 40;
 }
 
-#section-promo-iphone15 .section-promo-link {
+.section-promo:nth-child(3) .section-promo-link {
     color: var(--link-color-blue1);
     text-decoration-color: var(--link-color-blue1);
 }
@@ -393,6 +371,29 @@ a:hover {
 }
 
 /* media queries */
+
+@media (max-width: 734px) {
+
+    .section-promo {
+        background-repeat: no-repeat;
+    }
+
+    .section-promo:nth-child(1) {
+        background-image: url('./assets/images/promo-images/vision-pro-hero-small.jpg');
+        background-size: auto 34.25rem;
+        background-position: top;
+    }
+    .section-promo:nth-child(2) {
+        background-image: url('./assets/images/promo-images/iphone-15-pro-small.jpg');
+        background-size: auto 34.25rem;
+        background-position: top;
+    }
+    .section-promo:nth-child(3) {
+        background-image: url('./assets/images/promo-images/iphone-15-small.jpg');
+        background-size: auto 34.25rem;
+        background-position: top;
+    }
+}
 
 @media (min-width: 735px) {
     .container-grid {
