@@ -85,7 +85,6 @@ a:hover {
     justify-content: center;
     position: relative;
     background-color: #ffffff;
-    height: 39rem;
     overflow: hidden;
     z-index: 42;
 }
@@ -188,13 +187,10 @@ a:hover {
     text-decoration-color: var(--link-color-blue1);
 }
 
-#section-promo-vision-pro-title {
-    height: 3rem;
-    width: 100%;
-    background-size: auto 3rem;
+.section-promo-vision-pro-title {
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: top;
-    line-height: 3.25rem;
+    width: 100%;
 }
 
 .section-promo:nth-child(2) .section-promo-item {
@@ -376,12 +372,18 @@ a:hover {
 
     .section-promo {
         background-repeat: no-repeat;
+        height: 35rem;
     }
 
     .section-promo:nth-child(1) {
         background-image: url('./assets/images/promo-images/vision-pro-hero-small.jpg');
         background-size: auto 34.25rem;
         background-position: top;
+    }
+    .section-promo:nth-child(1) .section-promo-vision-pro-title {
+        background-image: url('./assets/images/promo-images/vision-pro-logo-small.png');
+        background-size: auto 2.125rem;
+        height: 2.125rem;
     }
     .section-promo:nth-child(2) {
         background-image: url('./assets/images/promo-images/iphone-15-pro-small.jpg');
