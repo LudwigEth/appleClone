@@ -6,7 +6,7 @@
     --text-gray: rgb(110, 110, 115);
     --text-white: rgb(245, 245, 247);
     --font-largest: 2rem;
-    --font-larger: 1.1875rem;
+    --font-larger: 1.125rem;
     --font-medium: 1.0625rem;
     --font-small: 0.75rem;
 }
@@ -95,7 +95,7 @@ a:hover {
 
 .section-promo:nth-child(2),
 .section-promo:nth-child(3) {
-    margin-top: -3.5rem;
+    margin-top: -3rem;
 }
 
 .section-promo:nth-child(2) {
@@ -114,7 +114,7 @@ a:hover {
 }
 
 .section-promo-content-wrapper {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     padding: 3.125rem 0 3.5rem;
     display: flex;
     flex-direction: column;
@@ -129,26 +129,30 @@ a:hover {
 }
 
 .section-promo-subtitle {
-    margin-top: 0.25rem;
+    margin-top: 0.375rem;
     font-size: var(--font-larger);
-    line-height: 1.5rem;
+    font-weight: 350;
+    line-height: 1.4375rem;
     letter-spacing: -0.0125rem;
 }
 
 .section-promo-aside {
-    margin-top: 1rem;
+    margin-top: 0.9375rem;
+    margin-bottom: 0.25rem;
+    font-weight: 350;
     font-size: var(--font-medium);
     color: var(--text-gray);
 }
 
 .section-promo-link-group,
 .grid-item-link-group {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 0.9375rem;
+    margin-top: 0.825rem;
     gap: 2.75rem;
-    line-height: 1.4375rem;
+    line-height: 1.3125rem;
     font-size: var(--font-medium);
     font-weight: 300;
 }
