@@ -384,6 +384,9 @@ a:hover {
         background-size: auto 2.125rem;
         height: 2.125rem;
     }
+    .section-promo:nth-child(1) .section-promo-subtitle {
+        max-width: 14.0625rem;
+    }
     .section-promo:nth-child(2) {
         background-image: url('./assets/images/promo-images/iphone-15-pro-small.jpg');
         background-size: auto 34.25rem;
