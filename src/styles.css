@@ -168,8 +168,8 @@ a:hover {
     width: 0.54rem;
     font-family: 'FontAwesome';
     content: '\f054';
-    font-size: calc(var(--font-medium - 25%));
-    line-height: 1.65rem;
+    font-size: calc(var(--font-medium) - 42%);
+    line-height: 1.7rem;
 }
 
 .section-promo:nth-child(1) .section-promo-item {
