@@ -5,6 +5,10 @@
     --link-color-blue2: rgb(41, 151, 255);
     --text-gray: rgb(110, 110, 115);
     --text-white: rgb(245, 245, 247);
+    --font-largest: 2rem;
+    --font-larger: 1.1875rem;
+    --font-medium: 1.0625rem;
+    --font-small: 0.75rem;
 }
 
 body {
@@ -120,13 +124,13 @@ a:hover {
 }
 
 .section-promo-title {
-    font-size: 3rem;
+    font-size: var(--font-largest);
     font-weight: 500;
 }
 
 .section-promo-subtitle {
     margin-top: 0.25rem;
-    font-size: 1.5rem;
+    font-size: var(--font-larger);
     font-weight: 300;
     line-height: 1.75rem;
 }
@@ -134,7 +138,7 @@ a:hover {
 .section-promo-aside {
     margin-top: 0.875rem;
     line-height: 1.4375rem;
-    font-size: 1.1875rem;
+    font-size: var(--font-medium);
     font-weight: 300;
     color: var(--text-gray);
 }
@@ -147,7 +151,7 @@ a:hover {
     margin-top: 0.9375rem;
     gap: 3.25rem;
     line-height: 1.4375rem;
-    font-size: 1.1875rem;
+    font-size: var(--font-medium);
     font-weight: 300;
 }
 
@@ -164,13 +168,13 @@ a:hover {
     width: 0.54rem;
     font-family: 'FontAwesome';
     content: '\f054';
-    font-size: 0.7rem;
+    font-size: calc(var(--font-medium - 25%));
     line-height: 1.65rem;
 }
 
 .section-promo:nth-child(1) .section-promo-item {
     align-items: flex-end;
-    font-size: 1.125rem;
+    font-size: var(--font-medium);
     z-index: 42;
 }
 
@@ -179,7 +183,7 @@ a:hover {
 }
 
 .section-promo:nth-child(1) h3 {
-    font-size: 1.125rem;
+    font-size: var(--font-medium);
 }
 
 .section-promo:nth-child(1) .section-promo-link {
@@ -240,7 +244,7 @@ a:hover {
 }
 
 .grid-item-subtitle {
-    font-size: 1.15625rem;
+    font-size: var(--font-medium);
     font-weight: 300;
     margin-top: 0.25rem;
     line-height: 1.4375rem;
@@ -251,7 +255,7 @@ a:hover {
 }
 
 .grid-item-link-group > a {
-    font-size: 1.0625rem;
+    font-size: var(--font-medium);
     color: var(--link-color-blue1);
 }
 
@@ -326,7 +330,7 @@ a:hover {
 
 .grid-item:nth-child(4) .grid-item-title {
     height: 2.25rem;
-    font-size: 2rem;
+    font-size: var(--font-largest);
     font-weight: 500;
 }
 
