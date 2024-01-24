@@ -157,6 +157,7 @@ a:hover {
 .grid-item-link-group > a {
     position: relative;
     text-align: center;
+    left: -0.42rem;
 }
 
 .section-promo-link-group > a::after,
