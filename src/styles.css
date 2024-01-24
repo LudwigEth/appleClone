@@ -131,15 +131,13 @@ a:hover {
 .section-promo-subtitle {
     margin-top: 0.25rem;
     font-size: var(--font-larger);
-    font-weight: 300;
-    line-height: 1.75rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.0125rem;
 }
 
 .section-promo-aside {
-    margin-top: 0.875rem;
-    line-height: 1.4375rem;
+    margin-top: 1rem;
     font-size: var(--font-medium);
-    font-weight: 300;
     color: var(--text-gray);
 }
 
