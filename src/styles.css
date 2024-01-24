@@ -243,14 +243,10 @@ a:hover {
 }
 
 .grid-item-subtitle {
-    font-size: var(--font-medium);
+    font-size: var(--font-larger);
     font-weight: 300;
     margin-top: 0.25rem;
     line-height: 1.4375rem;
-}
-
-.grid-item-link-group {
-    gap: 2rem;
 }
 
 .grid-item-link-group > a {
