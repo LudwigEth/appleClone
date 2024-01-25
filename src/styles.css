@@ -26,6 +26,10 @@ a {
     text-decoration: none;
 }
 
+sup {
+    font-size: calc(var(--font-medium) / 1.5);
+}
+
 a:hover {
     text-decoration: underline;
 }
