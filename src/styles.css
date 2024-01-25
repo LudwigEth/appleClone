@@ -440,14 +440,18 @@ a:hover {
 }
 
 @media (min-width: 735px) {
+    .container-grid {
+        grid-template-columns: repeat(2, minmax(21.375rem, 1fr));
+        padding: 0 0.75rem;
+        column-gap: 0.75rem;
+    }
+}
+
+@media (min-width: 735px) and (max-width: 1068px) {
     :root {
         --font-largest: 3rem;
         --font-larger: 1.5rem;
         --font-medium: 1.125rem;
-    }
-
-    .container-grid {
-        grid-template-columns: repeat(2, minmax(21.375rem, 1fr));
     }
 
     .section-promo {
