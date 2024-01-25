@@ -60,7 +60,6 @@ a:hover {
 /* fixed top navbar */
 
 .navbar {
-    display: none;
     max-width: 64rem;
     padding: 0 1.375rem;
     margin: 0 auto;
