@@ -170,11 +170,11 @@ a:hover {
 .grid-item-link-group > a::after {
     position: absolute;
     right: -0.75rem;
+    bottom: -0.0825rem;
     width: 0.54rem;
     font-family: 'FontAwesome';
     content: '\f054';
-    font-size: calc(var(--font-medium) - 42%);
-    line-height: 1.7rem;
+    font-size: 0.65rem;
 }
 
 .section-promo:nth-child(1) .section-promo-item {
