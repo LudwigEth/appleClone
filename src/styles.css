@@ -608,3 +608,134 @@ a:hover {
         background-image: url('./assets/images/promo-images/iphone-15-medium-tall.jpg');
     }
 }
+
+@media (min-width: 1069px) {
+    :root {
+        --font-larger: 1.3125rem
+    }
+
+    .section-promo {
+        height: 39.75rem;
+        background-size: auto 39rem;
+    }
+
+    .section-promo:nth-child(1) {
+        background-image: url('./assets/images/promo-images/vision-pro-hero-large.jpg');
+    }
+
+    .section-promo:nth-child(1) .section-promo-vision-pro-title {
+        background-image: url('./assets/images/promo-images/vision-pro-logo-large.png');
+        background-size: auto 3.5rem;
+        height: 3.5rem;
+    }
+
+    .section-promo:nth-child(2) {
+        background-image: url('./assets/images/promo-images/iphone-15-pro-large.jpg');
+    }
+
+    .section-promo:nth-child(3) {
+        background-image: url('./assets/images/promo-images/iphone-15-large.jpg');
+    }
+
+    .grid-item {
+        height: 36.25rem;
+    }
+
+    .grid-item > .grid-item-content-wrapper {
+        background-size: auto 36.25rem;
+        height: 36.75rem;
+    }
+
+    .grid-item .grid-item-title {
+        background-size: auto 2.0625rem;
+        height: 2.0625rem;
+        margin-top: -0.5rem;
+    }
+
+    .grid-item-subtitle {
+        font-size: var(--font-larger);
+    }
+
+    .grid-item:nth-child(1) > .grid-item-content-wrapper {
+        background-image: url('./assets/images/grid-images/grid-item-1-large.jpg');
+    }
+    
+    .grid-item:nth-child(1) .grid-item-title {
+        background-image: url('./assets/images/grid-images/grid-item-1-title-large.png');
+    }
+    
+    .grid-item:nth-child(1) .grid-item-subtitle {
+        margin-top: 0.625rem;
+    }
+
+    .grid-item:nth-child(1) .grid-item-link-group {
+        margin-left: 0.75rem;
+    }
+    
+    .grid-item:nth-child(2) > .grid-item-content-wrapper {
+        background-image: url('./assets/images/grid-images/grid-item-2-large.jpg');
+        position: relative;
+    }
+    
+    .grid-item:nth-child(2) .grid-item-title {
+        background-image: url('./assets/images/grid-images/grid-item-2-title-large.png');
+        background-size: auto 3.3125rem;
+        height: 3.3125rem;
+    }
+    
+    .grid-item:nth-child(2) .grid-item-subtitle {
+        margin-top: 0.5625rem;
+    }
+    
+    .grid-item:nth-child(3) > .grid-item-content-wrapper {
+        background-image: url('./assets/images/grid-images/grid-item-3-large.jpg');
+    }
+    
+    .grid-item:nth-child(3) .grid-item-title {
+        background-image: url('./assets/images/grid-images/grid-item-3-title-large.png');
+        background-size: auto 3.25rem;
+        height: 3.25rem;
+    }
+    
+    .grid-item:nth-child(3) .grid-item-subtitle {
+        margin-top: 0.5625rem;
+    }
+    
+    .grid-item:nth-child(4) > .grid-item-content-wrapper {
+        background-image: url('./assets/images/grid-images/grid-item-4-large.jpg');
+    }
+    
+    .grid-item:nth-child(4) .grid-item-title {
+        height: 2.55rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    .grid-item:nth-child(4) .grid-item-subtitle {
+        margin-top: 0.25rem;
+    }
+    
+    .grid-item:nth-child(5) > .grid-item-content-wrapper {
+        background-image: url('./assets/images/grid-images/grid-item-5-large.jpg');
+    }
+    
+    .grid-item:nth-child(5) .grid-item-title {
+        background-image: url('./assets/images/grid-images/grid-item-5-title-large.png');
+    }
+    
+    .grid-item:nth-child(5) .grid-item-subtitle {
+        margin-top: 0.5625rem;
+    }
+    
+    .grid-item:nth-child(6) > .grid-item-content-wrapper {
+        background-image: url('./assets/images/grid-images/grid-item-6-large.jpg');
+    }
+    
+    .grid-item:nth-child(6) .grid-item-title {
+        background-image: url('./assets/images/grid-images/grid-item-6-title-large.png');
+    }
+    
+    .grid-item:nth-child(6) .grid-item-subtitle {
+        margin-top: 0.5625rem;
+    }
+}
