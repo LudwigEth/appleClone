@@ -615,12 +615,32 @@ a:hover {
 
 @media (min-width: 1069px) {
     :root {
-        --font-larger: 1.3125rem
+        --font-largest: 3.5rem;
+        --font-larger: 1.75rem;
+        --font-medium: 1.3125rem;
     }
 
     .section-promo {
         height: 39.75rem;
         background-size: auto 39rem;
+    }
+
+    .section-promo-content-wrapper {
+        padding-top: 3.5rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .section-promo-subtitle {
+        margin-top: 0.75rem;
+    }
+
+    .section-promo-link-group {
+        margin-top: 1rem;
+    }
+
+    .section-promo-link-group > a::after {
+        bottom: -0.125rem;
+        font-size: 0.75rem;
     }
 
     .section-promo:nth-child(1) {
@@ -657,7 +677,7 @@ a:hover {
     }
 
     .grid-item-subtitle {
-        font-size: var(--font-larger);
+        font-size: var(--font-medium);
     }
 
     .grid-item:nth-child(1) > .grid-item-content-wrapper {
