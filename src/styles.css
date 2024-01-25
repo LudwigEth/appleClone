@@ -70,7 +70,7 @@ a:hover {
     margin: 0 -0.5rem;
 }
 
-.navbar .navbar-items {
+.navbar .navbar-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -325,6 +325,10 @@ a:hover {
     .section-promo {
         height: 35rem;
         background-size: auto 34.25rem;
+    }
+
+    .section-promo .section-promo-subtitle {
+        margin-bottom: 0;
     }
 
     .section-promo:nth-child(1) {
@@ -631,7 +635,12 @@ a:hover {
     }
 
     .section-promo-subtitle {
-        margin-top: 0.75rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.42rem;
+    }
+
+    .section-promo-aside {
+        font-weight: 300;
     }
 
     .section-promo-link-group {
