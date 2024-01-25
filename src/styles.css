@@ -578,3 +578,33 @@ a:hover {
         margin-top: 0.5625rem;
     }
 }
+
+@media (min-width: 735px) and (min-height: 734px) {
+    .section-promo {
+        height: 44.125rem;
+        background-size: auto 43.375rem;
+    }
+
+    .section-promo:nth-child(1) {
+        background-image: url('./assets/images/promo-images/vision-pro-hero-medium-tall.jpg');
+    }
+    
+    .section-promo-content-wrapper:nth-child(1) {
+        margin-bottom: -0.5rem;
+    }
+
+    .section-promo:nth-child(1) .section-promo-vision-pro-title {
+        background-image: url('./assets/images/promo-images/vision-pro-logo-medium-tall.png');
+        background-size: auto 3rem;
+        height: 3rem;
+        margin-bottom: -0.25rem;
+    }
+    
+    .section-promo:nth-child(2) {
+        background-image: url('./assets/images/promo-images/iphone-15-pro-medium-tall.jpg');
+    }
+
+    .section-promo:nth-child(3) {
+        background-image: url('./assets/images/promo-images/iphone-15-medium-tall.jpg');
+    }
+}
