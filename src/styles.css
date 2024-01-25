@@ -331,6 +331,10 @@ a:hover {
         margin-bottom: 0;
     }
 
+    .section-promo:nth-child(1) .section-promo-subtitle {
+        margin-top: 0.25rem;
+    }
+
     .section-promo:nth-child(1) {
         background-image: url('./assets/images/promo-images/vision-pro-hero-small.jpg');
     }
