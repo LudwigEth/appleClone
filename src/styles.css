@@ -588,9 +588,15 @@ a:hover {
 }
 
 @media (min-width: 735px) and (max-width: 1068px) and (min-height: 734px) {
+
     .section-promo {
         height: 44.125rem;
         background-size: auto 43.375rem;
+    }
+
+    .section-promo-content-wrapper {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
     }
 
     .section-promo:nth-child(1) {
