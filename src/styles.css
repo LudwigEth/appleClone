@@ -511,7 +511,7 @@ a:hover {
         z-index: 3;
     }
 
-    .button-menu-hamburger {
+    .hamburger-menu {
         display: flex;
         align-items: center;
         justify-content: center;
