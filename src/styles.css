@@ -42,6 +42,10 @@ a:hover {
     color: var(--text-white);
 }
 
+.hidden {
+    display: none;
+}
+
 .header {
     width: 100%;
     position: fixed;
