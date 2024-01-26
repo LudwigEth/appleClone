@@ -455,6 +455,82 @@ a:hover {
     }
 }
 
+@media (max-width: 833px) {
+
+    .nav-hidden {
+        display: none;
+    }
+
+    .svg-small {
+        display: none;
+    }
+
+    .svg-large {
+        display: block;
+    }
+
+    .navbar-item-list {
+        position: relative;
+        height: 3rem;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+        padding-right: 3rem;
+        z-index: 1;
+    }
+
+    .navbar {
+        padding: 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .navbar-item-svg {
+        height: 3rem;
+        width: 3rem;
+        padding: 0 1rem;
+    }
+
+    .navbar-item-list > :first-child {
+        margin-right: auto;
+    }
+
+    .container-menu {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        right: 0;
+        width: 3rem;
+        height: 3rem;
+        z-index: 3;
+    }
+
+    .button-menu-hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-color: inherit;
+        border: none;
+    }
+
+    .hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 0.5rem;
+    }
+
+    .hamburger-bun {
+        height: 0.075rem;
+        width: 0.95rem;
+        border-radius: 0.05rem;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
 @media (min-width: 735px) {
     .container-grid {
         grid-template-columns: repeat(2, minmax(21.375rem, 1fr));
