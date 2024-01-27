@@ -24,7 +24,6 @@ body {
     justify-content: center;
     align-items: center;
     font-family: system-ui;
-    letter-spacing: 0.005rem;
 }
 
 a {
@@ -175,7 +174,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     margin-top: 0.825rem;
-    gap: 2.75rem;
+    gap: 3.25rem;
     line-height: 1.3125rem;
     font-size: var(--font-medium);
     font-weight: 400;
@@ -343,6 +342,11 @@ a:hover {
     .section-promo .section-promo-subtitle {
         margin-bottom: 0;
         letter-spacing: -0.05rem;
+    }
+
+    .section-promo-link-group,
+    .grid-item-link-group {
+        gap: 2.75rem;
     }
 
     .section-promo:nth-child(1) .section-promo-subtitle {
@@ -585,17 +589,37 @@ a:hover {
     :root {
         --font-largest: 3rem;
         --font-larger: 1.5rem;
-        --font-medium: 1.125rem;
+        --font-medium: 1.1875rem;
     }
 
     .section-promo {
         height: 39.3125rem;
         background-size: auto 38.5625rem;
     }
+    
+    .section-promo-content-wrapper {
+        padding-bottom: 3rem;
+    }
+
+    .section-promo-title {
+        margin-bottom: 0.25rem;
+    }
+
+    .section-promo-subtitle {
+        letter-spacing: -0.075rem;
+    }
+
+    .section-promo-aside {
+        letter-spacing: -0.025rem;
+    }
 
     .section-promo-item {
         padding-top: 1rem;
         padding-bottom: 0.75rem;
+    }
+
+    .grid-item-link-group {
+        gap: 2.75rem;
     }
 
     .section-promo:nth-child(1) {
@@ -605,6 +629,7 @@ a:hover {
         background-image: url('./assets/images/promo-images/vision-pro-logo-medium.png');
         background-size: auto 3rem;
         height: 3rem;
+        margin-bottom: 0;
     }
 
     .section-promo:nth-child(2) {
@@ -614,14 +639,8 @@ a:hover {
         background-image: url('./assets/images/promo-images/iphone-15-medium.jpg');
     }
 
-    .section-promo-subtitle:nth-child(2),
-    .section-promo-subtitle:nth-child(3) {
-        margin-top: 0.6rem;
-        font-weight: 400;
-    }
-
     .grid-item {
-        height: 30.625rem;
+        height: 31.375rem;
     }
 
     .grid-item > .grid-item-content-wrapper {
@@ -632,7 +651,11 @@ a:hover {
     .grid-item .grid-item-title {
         background-size: auto 1.6875rem;
         height: 1.6875rem;
-        margin-top: -1.25rem;
+        margin-top: -1rem;
+    }
+
+    .grid-item .grid-item-subtitle {
+        letter-spacing: -0.025rem;
     }
 
     .grid-item:nth-child(1) > .grid-item-content-wrapper {
@@ -649,6 +672,7 @@ a:hover {
 
     .grid-item:nth-child(1) .grid-item-link-group {
         margin-left: 0.75rem;
+        letter-spacing: -0.0125rem;
     }
     
     .grid-item:nth-child(2) > .grid-item-content-wrapper {
@@ -723,6 +747,15 @@ a:hover {
     .section-promo-content-wrapper {
         padding-top: 3.5rem;
         padding-bottom: 3.5rem;
+        letter-spacing: -0.025rem;
+    }
+
+    .section-promo-subtitle {
+        letter-spacing: -0.075rem;
+    }
+
+    .grid-item-link-group {
+        gap: 2.75rem;
     }
 
     .section-promo:nth-child(1) {
@@ -738,6 +771,10 @@ a:hover {
         background-size: auto 3rem;
         height: 3rem;
         margin-bottom: -0.25rem;
+    }
+
+    .section-promo:nth-child(1) .section-promo-subtitle {
+        margin-top: 0.69rem;
     }
     
     .section-promo:nth-child(2) {
@@ -763,12 +800,18 @@ a:hover {
 
     .section-promo-content-wrapper {
         padding-top: 3.5rem;
-        padding-bottom: 4.5rem;
+        padding-bottom: 4.25rem;
     }
 
     .section-promo-subtitle {
         margin-top: 0.5rem;
         margin-bottom: 0.42rem;
+        letter-spacing: -0.125rem;
+    }
+
+    .section-promo:nth-child(3) .section-promo-subtitle,
+    .section-promo:nth-child(2) .section-promo-subtitle {
+        margin-top: 0.75rem;
     }
 
     .section-promo-aside {
@@ -777,6 +820,11 @@ a:hover {
 
     .section-promo-link-group {
         margin-top: 1rem;
+        gap: 3.25rem;
+    }
+
+    .grid-item-link-group {
+        gap: 2.75rem;
     }
 
     .section-promo-link-group > a::after {
@@ -803,18 +851,18 @@ a:hover {
     }
 
     .grid-item {
-        height: 36.25rem;
+        height: 37rem;
     }
 
     .grid-item > .grid-item-content-wrapper {
         background-size: auto 36.25rem;
-        height: 36.75rem;
+        height: 36.25rem;
     }
 
     .grid-item .grid-item-title {
         background-size: auto 2.0625rem;
         height: 2.0625rem;
-        margin-top: -0.5rem;
+        margin-top: -0.25rem;
     }
 
     .grid-item-subtitle {
