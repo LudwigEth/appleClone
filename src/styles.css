@@ -94,6 +94,10 @@ a:hover {
     display: none;
 }
 
+.container-menu {
+    display: none;
+}
+
 /* promo section */
 
 .container-promo {
