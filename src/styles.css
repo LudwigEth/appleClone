@@ -513,6 +513,8 @@ a:hover {
 
     .hamburger-menu {
         display: flex;
+        height: 3rem;
+        width: 3rem;
         align-items: center;
         justify-content: center;
         position: relative;
