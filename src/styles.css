@@ -46,6 +46,10 @@ a:hover {
     display: none;
 }
 
+.container-menu {
+    display: none;
+}
+
 .header {
     width: 100%;
     position: fixed;
