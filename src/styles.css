@@ -32,6 +32,10 @@ a {
     text-decoration: none;
 }
 
+a.link-underline {
+    text-decoration: underline;
+}
+
 sup {
     font-size: calc(var(--font-medium) / 1.5);
 }
@@ -359,7 +363,6 @@ footer {
 }
 
 .footnotes a {
-    text-decoration: underline;
     color: rgba(0, 0, 0, 0.72);
 }
 
