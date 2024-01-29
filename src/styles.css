@@ -17,13 +17,14 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: system-ui;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -60,13 +61,10 @@ a:hover {
 }
 
 .main {
-    position: absolute;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    top: 0;
     width: 100%;
-    overflow: hidden;
 }
 
 /* fixed top navbar */
