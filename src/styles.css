@@ -382,20 +382,18 @@ footer > section {
 
 .footnotes ul li {
     padding-bottom: 0.6rem;
-    line-height: 1rem;
-    letter-spacing: -0.0075rem;
 }
 
 .footer-bottom {
-    padding-top: 1rem;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    padding-top: 1rem;
 }
 
 .footer-bottom ul {
     display: flex;
-    gap: 1rem;
-    margin-top: 0.5rem;
+    gap: 1.125rem;
 }
 
 .footer-bottom ul li:not(:last-child)::after {
