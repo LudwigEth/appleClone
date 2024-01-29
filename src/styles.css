@@ -684,9 +684,9 @@ footer > section {
     }
 
     .shop-links {
-        border-top: 1px solid rgba(0, 0, 0, 0.16);
-        padding-top: 1rem;
-        margin-bottom: 0.25rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+        padding-bottom: 1.25rem;
+        margin-bottom: 1.25rem;
     }
 
     .location {
