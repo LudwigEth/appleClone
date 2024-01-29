@@ -375,6 +375,28 @@ footer {
     letter-spacing: -0.0075rem;
 }
 
+.footer-bottom {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.footer-bottom ul {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.footer-bottom ul li:not(:last-child)::after {
+    content: "";
+    position: relative;
+    font-size: 0.55rem;
+    bottom: 0.075rem;
+    left: 0.5rem;
+    border-right: 1px solid var(--text-footer-lighter);
+}
+
 /* media queries */
 
 @media (max-width: 734px) {
