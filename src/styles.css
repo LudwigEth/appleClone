@@ -5,7 +5,8 @@
     --link-color-blue2: rgb(41, 151, 255);
     --text-gray: rgb(110, 110, 115);
     --text-white: rgb(245, 245, 247);
-    --text-footnotes: rgba(0, 0, 0, 0.56);
+    --text-footer-lighter: rgba(0, 0, 0, 0.56);
+    --text-footer-darker: rgba(0, 0, 0, 0.72);
     --font-largest: 2rem;
     --font-larger: 1.1875rem;
     --font-medium: 1.0625rem;
@@ -341,12 +342,16 @@ a:hover {
 
 footer {
     font-size: var(--font-small);
+    color: var(--text-footer-lighter);
     padding: 1rem 1rem;
     background-color: var(--text-white);
 }
 
+.footer-darker {
+    color: var(--text-footer-darker);
+}
+
 .footnotes {
-    color: var(--text-footnotes);
     padding-bottom: 1.25rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.16);
 }
@@ -362,9 +367,6 @@ footer {
     letter-spacing: -0.0075rem;
 }
 
-.footnotes a {
-    color: rgba(0, 0, 0, 0.72);
-}
 
 /* media queries */
 
