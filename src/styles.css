@@ -677,16 +677,27 @@ footer > section {
 }
 
 @media (min-width: 834px) {
+
+    footer {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
     .shop-links {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.16);
-        padding-bottom: 1.25rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.16);
+        padding-top: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .location {
+        position: absolute;
+        right: 0;
     }
 
     .footer-legal-group {
         display: flex;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        margin-top: 1.25rem;
+        flex-direction: column;
+        gap: 0.25rem;
     }
 }
 
