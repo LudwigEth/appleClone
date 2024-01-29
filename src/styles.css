@@ -340,12 +340,12 @@ a:hover {
 /* footer */
 
 footer {
+    font-size: var(--font-small);
     padding: 1rem 1rem;
     background-color: var(--text-white);
 }
 
 .footnotes {
-    font-size: var(--font-small);
     color: var(--text-footnotes);
     padding-bottom: 1.25rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.16);
