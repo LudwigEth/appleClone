@@ -401,7 +401,7 @@ footer > section {
     position: relative;
     font-size: 0.55rem;
     bottom: 0.075rem;
-    left: 0.5rem;
+    left: 0.5625rem;
     border-right: 1px solid var(--text-footer-lighter);
 }
 
