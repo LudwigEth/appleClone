@@ -894,6 +894,28 @@ footer > section {
     }
 }
 
+@media (min-width: 1024px) {
+    footer {
+        padding-bottom: 1.125rem;
+    }
+
+    .footer-legal-group {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1.875rem;
+    }
+
+    .footer-bottom ul {
+        margin-top: 0;
+        gap: 1.0625rem;
+    }
+
+    .location {
+        position: absolute;
+        right: 0;
+    }
+}
+
 @media (min-width: 1069px) {
     :root {
         --font-largest: 3.5rem;
