@@ -37,6 +37,10 @@ a.link-underline {
     text-decoration: underline;
 }
 
+a.link-highlight {
+    color: rgb(0, 102, 204);
+}
+
 sup {
     font-size: calc(var(--font-medium) / 1.5);
 }
@@ -51,6 +55,10 @@ a:hover {
 
 .hidden {
     display: none;
+}
+
+.no-wrap {
+    text-wrap: nowrap;
 }
 
 .container-menu {
