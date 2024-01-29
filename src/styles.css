@@ -358,6 +358,11 @@ footer {
     letter-spacing: -0.0075rem;
 }
 
+.footnotes a {
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.72);
+}
+
 /* media queries */
 
 @media (max-width: 734px) {
