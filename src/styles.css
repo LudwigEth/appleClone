@@ -7,6 +7,7 @@
     --text-white: rgb(245, 245, 247);
     --text-footer-lighter: rgba(0, 0, 0, 0.56);
     --text-footer-darker: rgba(0, 0, 0, 0.72);
+    --border-footer: rgba(0, 0, 0, 0.16);
     --font-largest: 2rem;
     --font-larger: 1.1875rem;
     --font-medium: 1.0625rem;
