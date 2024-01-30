@@ -679,14 +679,15 @@ footer > section {
 @media (min-width: 834px) {
 
     footer {
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
+        padding-left: 1.375rem;
+        padding-right: 1.375rem;
+        padding-bottom: 1.125rem;
     }
 
     .shop-links {
         border-bottom: 1px solid rgba(0, 0, 0, 0.16);
-        padding-bottom: 1.25rem;
-        margin-bottom: 1.25rem;
+        padding-bottom: 1.125rem;
+        margin-bottom: 1.125rem;
     }
 
     .location {
