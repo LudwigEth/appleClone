@@ -412,6 +412,10 @@ footer > section {
     color: rgba(0, 0, 0, 0.88);
 }
 
+.navigation-link-group svg {
+    display: none;
+}
+
 .navigation-links ul {
     display: flex;
     flex-direction: column;
