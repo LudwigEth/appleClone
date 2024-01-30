@@ -384,6 +384,12 @@ footer > section {
     padding-bottom: 0.6rem;
 }
 
+.navigation-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .footer-bottom {
     display: flex;
     flex-direction: column;
