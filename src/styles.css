@@ -415,14 +415,14 @@ footer > section {
 .navigation-links ul {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.6rem;
 }
 
 .footer-bottom {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top: 1rem;
+    padding-top: 2.3125rem;
 }
 
 .footer-bottom ul {
@@ -686,7 +686,7 @@ footer > section {
     }
 
     .shop-links {
-        border-top: 1px solid rgba(0, 0, 0, 0.16);
+        border-top: 1px solid var(--border-footer);
         padding-top: 1rem;
     }
 
@@ -719,9 +719,9 @@ footer > section {
     }
 
     .shop-links {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+        border-bottom: 1px solid var(--border-footer);
         padding-bottom: 1.125rem;
-        margin-bottom: 1.125rem;
+        margin-bottom: 1.25rem;
     }
 
     .location {
