@@ -362,6 +362,25 @@ a:hover {
     align-items: center;
 }
 
+.dot-navigation {
+    height: 2.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.875rem;
+}
+
+.dot {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+.dot.active-item {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 /* footer */
 
 footer {
