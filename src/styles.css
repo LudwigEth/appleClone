@@ -706,11 +706,21 @@ footer > section {
         gap: 0;
     }
 
+    .navigation-link-group {
+        position: relative;
+        z-index: 3;
+        overflow: hidden;
+    }
+
     .navigation-dropdown {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0.625rem 0;
+        background-color: var(--text-white);
+        overflow: hidden;
+        z-index: 2;
     }
 
     .navigation-link-group h3 {
@@ -730,7 +740,19 @@ footer > section {
     }
 
     .navigation-link-group.dropdown-expanded ul {
+        position: relative;
         display: flex;
+        animation: appearOnDropDown 0.3s ease forwards;
+        z-index: 1;
+    }
+
+    @keyframes appearOnDropDown {
+        0% {
+            transform: translateY(-6rem);
+        }
+        100% {
+            transform: translateY(0);
+        }
     }
 
     .footer-bottom {
