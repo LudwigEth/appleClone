@@ -692,6 +692,10 @@ footer > section {
     .navigation-links {
         flex-direction: column;
         padding-top: 1.25rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
     .navigation-link-group:not(.column-container:last-child .navigation-link-group:last-child) {
