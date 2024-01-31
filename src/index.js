@@ -1,11 +1,15 @@
 import './styles.css';
 
+document.addEventListener('DOMContentLoaded', initializeEventListeners);
+
 const sectionNavigationLinks = document.getElementById('navigation-links');
 
-sectionNavigationLinks.addEventListener(
-    'click',
-    sectionNavigationLinksClickHandler
-);
+function initializeEventListeners() {
+    sectionNavigationLinks.addEventListener(
+        'click',
+        sectionNavigationLinksClickHandler
+    );
+}
 
 function sectionNavigationLinksClickHandler(e) {
     const dropdown = e.target.closest('.navigation-dropdown');
