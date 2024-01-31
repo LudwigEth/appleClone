@@ -355,6 +355,11 @@ a:hover {
     flex-direction: column;
 }
 
+.image-carousel {
+    width: 100%;
+    position: relative;
+}
+
 .carousel-navigation {
     position: relative;
     display: flex;
