@@ -364,7 +364,99 @@ a:hover {
 
 .image-carousel {
     width: 100%;
+    display: flex;
+    height: var(--image-carousel-height);
     position: relative;
+    transition: 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.carousel-item-container {
+    position: relative;
+    background-origin: padding-box;
+    height: var(--image-carousel-height);
+}
+
+.gradient-overlay-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    height: var(--image-carousel-height);
+    width: var(--image-carousel-width);
+    margin: 0 0.46875rem;
+    z-index: 2;
+    transition: 0.1s ease;
+}
+
+.image-carousel-container-active .gradient-overlay-dark {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.7));
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.carousel-item {
+    display: flex;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 0%;
+    height: var(--image-carousel-height);
+    width: var(--image-carousel-width);
+}
+
+.carousel-item-info-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+.carousel-item-info-bottom {
+    display: flex;
+    position: relative;
+    z-index: 3;
+    opacity: 0;
+    margin-bottom: 0.5rem;
+    transition: 0.6s ease;
+}
+
+.image-carousel-container-active .carousel-item-info-bottom {
+    opacity: 1;
+    margin: var(--carousel-item-info-margin);
+}
+
+.apple-tv-title {
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: var(--apple-tv-title-height);
+    width: var(--apple-tv-title-width);
+}
+
+.apple-tv-genre,
+.apple-tv-teaser {
+    font-size: var(--font-tv-text);
+    color: rgb(255, 255, 255);
+    padding: 0 0.9375rem;
+    text-align: center;
+    text-wrap: wrap;
+}
+
+.apple-tv-genre {
+    font-weight: 600;
+}
+
+.apple-tv-stream-button {
+    font-size: var(--font-tv-button);
+    font-weight: 525;
+    padding: 0.6875rem 1.3125rem;
+    min-width: 1.75rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 42.69rem;
+    border: 1px solid rgb(255, 255, 255);
 }
 
 .carousel-navigation {
