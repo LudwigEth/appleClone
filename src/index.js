@@ -1,8 +1,7 @@
+import { sectionNavigationLinks } from './modules/domElements';
 import './styles.css';
 
 document.addEventListener('DOMContentLoaded', initializeEventListeners);
-
-const sectionNavigationLinks = document.getElementById('navigation-links');
 
 function initializeEventListeners() {
     sectionNavigationLinks.addEventListener(
