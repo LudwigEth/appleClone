@@ -12,6 +12,13 @@
     --font-larger: 1.1875rem;
     --font-medium: 1.0625rem;
     --font-small: 0.75rem;
+    --font-tv-text: 0.9375rem;
+    --font-tv-button: 0.875rem;
+    --image-carousel-height: 30.9375rem;
+    --image-carousel-width: 17.125rem;
+    --apple-tv-title-height: 3.375rem;
+    --apple-tv-title-width: 13.75rem;
+    --carousel-item-info-margin: 0 0 2rem 0;
 }
 
 * {
