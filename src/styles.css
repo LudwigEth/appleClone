@@ -16,6 +16,7 @@
     --font-tv-button: 0.875rem;
     --image-carousel-height: 30.9375rem;
     --image-carousel-width: 17.125rem;
+    --carousel-item-width: calc(var(--image-carousel-width) + 0.9375rem);
     --apple-tv-title-height: 3.375rem;
     --apple-tv-title-width: 13.75rem;
     --carousel-item-info-margin: 0 0 2rem 0;
