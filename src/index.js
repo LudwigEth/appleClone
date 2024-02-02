@@ -118,29 +118,18 @@ function scrollImageCarousel(directionToScrollTo) {
         return;
     }
 
-    const rootStyles = getComputedStyle(document.documentElement);
-    const scrollDistance = parseFloat(
-        rootStyles.getPropertyValue('--scroll-distance').trim()
-    );
-
     if (directionToScrollTo === 'left') {
-        document.documentElement.style.setProperty(
-            '--scroll-distance',
-            `${scrollDistance + carouselValues.itemWidth}px`
-        );
+        updateScrollDistance(carouselValues.itemWidth);
     }
     if (directionToScrollTo === 'right') {
-        document.documentElement.style.setProperty(
-            '--scroll-distance',
-            `${scrollDistance - carouselValues.itemWidth}px`
-        );
+        updateScrollDistance(-carouselValues.itemWidth);
     }
     if (directionToScrollTo === 'first') {
         appleTvSection.classList.add('no-animation');
         imageCarousel
             .querySelector('.carousel-item-container[data-index="1"]')
             .classList.add('image-carousel-container-active');
-        document.documentElement.style.setProperty('--scroll-distance', '0px');
+        updateScrollDistance(carouselValues.itemWidth * 10);
         imageCarousel
             .querySelector('.carousel-item-container[data-index="1c"]')
             .classList.remove('image-carousel-container-active');
