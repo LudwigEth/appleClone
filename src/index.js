@@ -49,3 +49,17 @@ function dropDownSvgAnimation(dropdown, linkGroup) {
         svgAnimateCollapse.beginElement();
     }
 }
+
+// functions for handling the apple-tv image-carousel
+
+function setInitialScrollPosition() {
+    const carouselItems = imageCarousel.querySelectorAll(
+        '.carousel-item-container'
+    );
+    const itemWidth = carouselItems[0].offsetWidth;
+    const carouselWidth = imageCarousel.offsetWidth;
+    const firstItemPosition = itemWidth * 2;
+    const scrollPosition =
+        firstItemPosition - carouselWidth / 2 + itemWidth / 2;
+    imageCarousel.scrollLeft = scrollPosition;
+}
