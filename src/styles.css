@@ -72,6 +72,10 @@ a:hover {
     display: none;
 }
 
+.no-animation {
+    transition: none !important;
+}
+
 .no-wrap {
     text-wrap: nowrap;
 }
