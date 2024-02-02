@@ -2,6 +2,7 @@ import {
     appleTvSection,
     buttonNextImage,
     buttonPrevImage,
+    dotNavigation,
     imageCarousel,
     sectionNavigationLinks,
 } from './modules/domElements';
@@ -22,6 +23,7 @@ function initializeEventListeners() {
         'click',
         sectionNavigationLinksClickHandler
     );
+    appleTvSection.addEventListener('click', imageCarouselClickHandler);
     window.addEventListener('resize', setInitialScrollPosition);
 }
 
@@ -174,6 +176,7 @@ function handleScrollToRight() {
         );
         console.log('first handle left');
     }
+    updateDotNavigation();
 }
 
 function handleScrollToLeft() {
@@ -189,6 +192,7 @@ function handleScrollToLeft() {
         );
         console.log('first handle left');
     }
+    updateDotNavigation();
 }
 
 function imageCarouselClickHandler(e) {
@@ -212,4 +216,23 @@ function debounceCarouselClickHandler() {
     }, 1001);
 }
 
-appleTvSection.addEventListener('click', imageCarouselClickHandler);
+function updateDotNavigation() {
+    const currentActiveDot = dotNavigation.querySelector('.active-item');
+    const currentActiveContainerIndex =
+        carouselValues.activeContainer.dataset.index;
+    const dotToActivate = dotNavigation.querySelector(
+        `.dot[data-index="${currentActiveContainerIndex}"]`
+    );
+    currentActiveDot.classList.remove('active-item');
+    if (currentActiveContainerIndex === '1c') {
+        dotNavigation
+            .querySelector('.dot[data-index="1"]')
+            .classList.add('active-item');
+    } else if (currentActiveContainerIndex === '10c') {
+        dotNavigation
+            .querySelector('.dot[data-index="10"]')
+            .classList.add('active-item');
+    } else {
+        dotToActivate.classList.add('active-item');
+    }
+}
