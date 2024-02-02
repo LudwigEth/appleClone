@@ -95,6 +95,19 @@ function setInitialScrollPosition() {
     imageCarousel.scrollLeft = scrollPosition;
 }
 
+function updateScrollDistance(addedDistance) {
+    const rootStyles = getComputedStyle(document.documentElement);
+    const scrollDistance = parseFloat(
+        rootStyles.getPropertyValue('--scroll-distance').trim()
+    );
+    const newScrollDistance = scrollDistance + parseFloat(addedDistance);
+    const newScrollDistanceString = newScrollDistance + 'px';
+    document.documentElement.style.setProperty(
+        '--scroll-distance',
+        newScrollDistanceString
+    );
+}
+
 function scrollImageCarousel(directionToScrollTo) {
     if (
         directionToScrollTo !== 'left' &&
