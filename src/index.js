@@ -68,6 +68,16 @@ const carouselValues = {
     get carouselWidth() {
         return imageCarousel.offsetWidth;
     },
+    firstContainer: document.getElementById('first-carousel-container'),
+    get previousContainer() {
+        return this.activeContainer.previousElementSibling;
+    },
+    get nextContainer() {
+        return this.activeContainer.nextElementSibling;
+    },
+    get activeContainer() {
+        return imageCarousel.querySelector('.image-carousel-container-active');
+    },
     get activeContainerIndex() {
         return imageCarousel.querySelector('.image-carousel-container-active')
             .dataset.index;
