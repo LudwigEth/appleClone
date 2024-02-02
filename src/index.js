@@ -62,6 +62,10 @@ const carouselValues = {
     get carouselWidth() {
         return imageCarousel.offsetWidth;
     },
+    get activeContainerIndex() {
+        return imageCarousel.querySelector('.image-carousel-container-active')
+            .dataset.index;
+    },
 };
 
 function setInitialScrollPosition() {
