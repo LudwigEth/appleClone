@@ -393,8 +393,7 @@ a:hover {
     height: var(--image-carousel-height);
     position: relative;
     transition: 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-    left: calc(var(--image-carousel-width) * -2 + -0.9375rem * 2);
-    margin-left: calc(50% - 0.46875rem - var(--image-carousel-width) / 2);
+    overflow: hidden;
 }
 
 .carousel-item-container {
