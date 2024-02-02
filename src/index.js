@@ -206,6 +206,10 @@ function imageCarouselClickHandler(e) {
         scrollImageCarousel('right');
         handleScrollToRight();
     }
+    if (dotNavigation.contains(e.target) && e.target !== dotNavigation) {
+        const index = parseFloat(e.target.dataset.index);
+        handleDotClick(index, e);
+    }
 }
 
 function debounceCarouselClickHandler() {
