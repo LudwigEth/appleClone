@@ -20,6 +20,7 @@
     --apple-tv-title-height: 3.375rem;
     --apple-tv-title-width: 13.75rem;
     --carousel-item-info-margin: 0 0 2rem 0;
+    --scroll-distance: 0px;
 }
 
 * {
