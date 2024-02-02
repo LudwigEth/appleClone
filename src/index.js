@@ -1,14 +1,29 @@
-import { sectionNavigationLinks } from './modules/domElements';
+import { imageCarousel, sectionNavigationLinks } from './modules/domElements';
 import './styles.css';
 
-document.addEventListener('DOMContentLoaded', initializeEventListeners);
+document.addEventListener(
+    'DOMContentLoaded',
+    runFunctionsAfterDomContentLoaded
+);
+
+function runFunctionsAfterDomContentLoaded() {
+    initializeEventListeners();
+    initialPageLoadFunctions();
+}
 
 function initializeEventListeners() {
     sectionNavigationLinks.addEventListener(
         'click',
         sectionNavigationLinksClickHandler
     );
+    window.addEventListener('resize', setInitialScrollPosition);
 }
+
+function initialPageLoadFunctions() {
+    setInitialScrollPosition();
+}
+
+// handles the animation for the dropdown expand or collapse svg indicator in small vw
 
 function sectionNavigationLinksClickHandler(e) {
     const dropdown = e.target.closest('.navigation-dropdown');
