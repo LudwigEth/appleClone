@@ -409,9 +409,27 @@ a:hover {
     position: relative;
     background-origin: padding-box;
     height: var(--image-carousel-height);
+    transform: translateX(var(--scroll-distance));
+    transition: 1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .gradient-overlay-dark {
+    height: var(--image-carousel-height);
+    width: var(--image-carousel-width);
+    margin: 0 0.46875rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.7));
+    background-size: auto;
+    background-repeat: repeat;
+    z-index: 2;
+}
+
+.overlay-white-opaque {
     position: absolute;
     top: 0;
     left: 0;
