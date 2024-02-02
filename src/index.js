@@ -139,10 +139,7 @@ function scrollImageCarousel(directionToScrollTo) {
         imageCarousel
             .querySelector('.carousel-item-container[data-index="10"]')
             .classList.add('image-carousel-container-active');
-        document.documentElement.style.setProperty(
-            '--scroll-distance',
-            `${scrollDistance - carouselValues.itemWidth * 10}px`
-        );
+        updateScrollDistance(-carouselValues.itemWidth * 10);
         carouselValues.activeContainer.classList.remove(
             'image-carousel-container-active'
         );
