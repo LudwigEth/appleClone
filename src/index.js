@@ -72,3 +72,25 @@ function setInitialScrollPosition() {
         carouselValues.itemWidth / 2;
     imageCarousel.scrollLeft = scrollPosition;
 }
+
+function scrollImageCarousel(directionToScrollTo) {
+    if (directionToScrollTo !== 'left' || directionToScrollTo !== 'right')
+        return;
+    const rootStyles = getComputedStyle(document.documentElement);
+    const scrollDistance = parseFloat(
+        rootStyles.getPropertyValue('--scroll-distance').trim()
+    );
+
+    if (directionToScrollTo === 'left') {
+        document.documentElement.style.setProperty(
+            '--scroll-distance',
+            `${scrollDistance + carouselValues.itemWidth}px`
+        );
+    }
+    if (directionToScrollTo === 'right') {
+        document.documentElement.style.setProperty(
+            '--scroll-distance',
+            `${scrollDistance - carouselValues.itemWidth}px`
+        );
+    }
+}
