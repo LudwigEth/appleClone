@@ -527,6 +527,7 @@ a:hover {
     width: 0.5rem;
     border-radius: 0.25rem;
     background-color: rgba(0, 0, 0, 0.42);
+    transition: 0.2s ease 0.5s;
 }
 
 .dot.active-item {
