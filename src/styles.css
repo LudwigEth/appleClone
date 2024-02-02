@@ -374,13 +374,17 @@ a:hover {
     position: relative;
 }
 
+.no-animation * {
+    transition: none !important;
+}
+
 .button-prev-image {
     position: absolute;
     top: 0;
     left: 0;
     height: var(--image-carousel-height);
     width: calc((100vw - (var(--image-carousel-width) + 1.875rem)) / 2);
-    z-index: 4;
+    z-index: 5;
 }
 
 .button-next-image {
