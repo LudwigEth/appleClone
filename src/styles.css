@@ -393,7 +393,7 @@ a:hover {
     right: 0;
     height: var(--image-carousel-height);
     width: calc((100vw - (var(--image-carousel-width) + 1.875rem)) / 2);
-    z-index: 4;
+    z-index: 5;
 }
 
 .image-carousel {
