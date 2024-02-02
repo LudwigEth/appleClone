@@ -239,3 +239,20 @@ function updateDotNavigation() {
         dotToActivate.classList.add('active-item');
     }
 }
+
+function handleDotClick(index, e) {
+    const currentActiveDot = dotNavigation.querySelector('.active-item');
+    const dotIndex = parseFloat(index);
+    const containerIndex = parseFloat(carouselValues.activeContainerIndex);
+    const travelDistance =
+        (containerIndex - dotIndex) * parseFloat(carouselValues.itemWidth);
+    currentActiveDot.classList.remove('active-item');
+    carouselValues.activeContainer.classList.remove(
+        'image-carousel-container-active'
+    );
+    e.target.classList.add('active-item');
+    imageCarousel
+        .querySelector(`.carousel-item-container[data-index="${index}"]`)
+        .classList.add('image-carousel-container-active');
+    updateScrollDistance(travelDistance);
+}
