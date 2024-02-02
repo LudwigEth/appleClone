@@ -94,8 +94,15 @@ function setInitialScrollPosition() {
 }
 
 function scrollImageCarousel(directionToScrollTo) {
-    if (directionToScrollTo !== 'left' || directionToScrollTo !== 'right')
+    if (
+        directionToScrollTo !== 'left' &&
+        directionToScrollTo !== 'right' &&
+        directionToScrollTo !== 'first' &&
+        directionToScrollTo !== 'last'
+    ) {
         return;
+    }
+
     const rootStyles = getComputedStyle(document.documentElement);
     const scrollDistance = parseFloat(
         rootStyles.getPropertyValue('--scroll-distance').trim()
