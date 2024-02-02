@@ -1,4 +1,10 @@
-import { imageCarousel, sectionNavigationLinks } from './modules/domElements';
+import {
+    appleTvSection,
+    buttonNextImage,
+    buttonPrevImage,
+    imageCarousel,
+    sectionNavigationLinks,
+} from './modules/domElements';
 import './styles.css';
 
 document.addEventListener(
