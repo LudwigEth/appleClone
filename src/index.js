@@ -65,10 +65,10 @@ const carouselValues = {
 };
 
 function setInitialScrollPosition() {
-    const firstItemPosition = carouselValues.itemWidth() * 2;
+    const firstItemPosition = carouselValues.itemWidth * 2;
     const scrollPosition =
         firstItemPosition -
-        carouselValues.carouselWidth() / 2 +
-        carouselValues.itemWidth() / 2;
+        carouselValues.carouselWidth / 2 +
+        carouselValues.itemWidth / 2;
     imageCarousel.scrollLeft = scrollPosition;
 }
