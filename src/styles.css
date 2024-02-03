@@ -1036,11 +1036,11 @@ footer > section {
     }
 
     .top-bun {
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.45rem;
     }
 
     .bottom-bun {
-        margin-top: 0.4rem;
+        margin-top: 0.45rem;
     }
 
     #hamburger-menu-status:checked + .hamburger-menu .top-bun {
