@@ -26,6 +26,8 @@ function initializeEventListeners() {
     );
     appleTvSection.addEventListener('click', imageCarouselClickHandler);
     window.addEventListener('resize', setInitialScrollPosition);
+    window.addEventListener('resize', debouncedAdjustCarousel);
+    window.addEventListener('resize', stopAutoScrollCarousel);
 }
 
 function initialPageLoadFunctions() {
@@ -275,6 +277,30 @@ function stopAutoScrollCarousel() {
         clearInterval(carouselValues.autoScrollInterval);
         carouselValues.autoScrollInterval = null;
     }
+}
+
+function adjustImageCarouselOnResize() {
+    if (carouselValues.activeContainerIndex > 1) {
+        carouselValues.scrollDistance = -(
+            carouselValues.itemWidth *
+            (carouselValues.activeContainerIndex - 1)
+        );
+    }
+    startAutoScrollCarousel();
+}
+
+const debouncedAdjustCarousel = debounce(adjustImageCarouselOnResize, 250);
+
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
 }
 
 function setupCarouselVisibilityObserver() {
