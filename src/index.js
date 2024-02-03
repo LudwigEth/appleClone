@@ -282,6 +282,7 @@ function startAutoScrollCarousel() {
             debounceCarouselClickHandler();
             scrollImageCarousel('right');
             handleScrollToRight();
+            appleTvSection.classList.remove('no-animation');
         }, 4500);
     }
 }
@@ -300,6 +301,7 @@ function adjustImageCarouselOnResize() {
             (carouselValues.activeContainerIndex - 1)
         );
     }
+    appleTvSection.classList.remove('no-animation');
     startAutoScrollCarousel();
 }
 
