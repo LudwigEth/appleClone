@@ -121,16 +121,9 @@ function setInitialScrollPosition() {
 }
 
 function updateScrollDistance(addedDistance) {
-    const rootStyles = getComputedStyle(document.documentElement);
-    const scrollDistance = parseFloat(
-        rootStyles.getPropertyValue('--scroll-distance').trim()
-    );
-    const newScrollDistance = scrollDistance + parseFloat(addedDistance);
-    const newScrollDistanceString = newScrollDistance + 'px';
-    document.documentElement.style.setProperty(
-        '--scroll-distance',
-        newScrollDistanceString
-    );
+    const newScrollDistance =
+        carouselValues.scrollDistance + parseFloat(addedDistance);
+    carouselValues.scrollDistance = newScrollDistance;
 }
 
 function scrollImageCarousel(directionToScrollTo) {
