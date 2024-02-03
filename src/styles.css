@@ -1150,10 +1150,16 @@ footer > section {
 }
 
 @media (min-width: 735px) and (max-width: 1068px) {
+
     :root {
         --font-largest: 3rem;
         --font-larger: 1.5rem;
         --font-medium: 1.1875rem;
+        --font-tv-text: 1.1875rem;
+        --font-tv-button: 0.875rem;
+        --image-carousel-height: 23rem;
+        --image-carousel-width: 43.0625rem;
+        --carousel-item-info-margin: 0 0 1.5rem 0;
     }
 
     .section-promo {
@@ -1295,6 +1301,109 @@ footer > section {
     .grid-item:nth-child(6) .grid-item-subtitle {
         margin-top: 0.5625rem;
     }
+
+    .carousel-item {
+        background-position: 50% 50%;
+    }
+
+    .carousel-item-info-top {
+        display: none;
+    }
+
+    .carousel-item-info-bottom {
+        padding-left: 2.625rem;
+        flex-direction: row-reverse;
+    }
+
+    .apple-tv-text-wrapper {
+        align-self: center;
+        flex-wrap: wrap;
+        gap: 0;
+        max-width: 22.5rem;
+        margin-left: 2rem;
+    }
+
+    .apple-tv-text-wrapper > * {
+        display: inline;
+        padding: 0;
+        text-align: start;
+    }
+
+    .apple-tv-genre {
+        margin-right: 0.5rem;
+    }
+
+    .apple-tv-genre::after {
+        position: relative;
+        content: '·';
+        left: 0.25rem;
+    }
+
+    .apple-tv-stream-button {
+        text-align: center;
+        font-weight: 550;
+    }
+
+    .carousel-item {
+        align-items: end;
+        margin: 0 0.46875rem;
+    }
+
+    #carousel-item-9-copy {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-9-background-medium.jpg);
+    }
+
+    #carousel-item-10-copy {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-10-background-medium.jpg);
+    }
+
+    #carousel-item-1 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-1-background-medium.jpg);
+    }
+
+    #carousel-item-2 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-2-background-medium.jpg);
+    }
+
+    #carousel-item-3 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-3-background-medium.jpg);
+    }
+    #carousel-item-4 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-4-background-medium.jpg);
+    }
+
+    #carousel-item-5 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-5-background-medium.jpg);
+    }
+
+    #carousel-item-6 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-6-background-medium.jpg);
+    }
+
+    #carousel-item-7 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-7-background-medium.jpg);
+    }
+
+    #carousel-item-8 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-8-background-medium.jpg);
+    }
+
+    #carousel-item-9 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-9-background-medium.jpg);
+    }
+
+    #carousel-item-10 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-10-background-medium.jpg);
+    }
+
+    #carousel-item-1-copy {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-1-background-medium.jpg);
+    }
+
+    #carousel-item-2-copy {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-2-background-medium.jpg);
+    }
+
 }
 
 @media (min-width: 735px) and (max-width: 1068px) and (min-height: 734px) {
