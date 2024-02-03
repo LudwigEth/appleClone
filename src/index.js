@@ -16,6 +16,7 @@ document.addEventListener(
 function runFunctionsAfterDomContentLoaded() {
     initializeEventListeners();
     initialPageLoadFunctions();
+    setupCarouselVisibilityObserver();
 }
 
 function initializeEventListeners() {
@@ -61,6 +62,8 @@ function dropDownSvgAnimation(dropdown, linkGroup) {
 // functions for handling the apple-tv image-carousel
 
 const carouselValues = {
+    firstContainer: document.getElementById('first-carousel-container'),
+    autoScrollInterval: null,
     get carouselItems() {
         return imageCarousel.querySelectorAll('.carousel-item-container');
     },
@@ -70,7 +73,6 @@ const carouselValues = {
     get carouselWidth() {
         return imageCarousel.offsetWidth;
     },
-    firstContainer: document.getElementById('first-carousel-container'),
     get previousContainer() {
         return this.activeContainer.previousElementSibling;
     },
@@ -255,4 +257,43 @@ function handleDotClick(index, e) {
         .querySelector(`.carousel-item-container[data-index="${index}"]`)
         .classList.add('image-carousel-container-active');
     updateScrollDistance(travelDistance);
+}
+
+function startAutoScrollCarousel() {
+    if (carouselValues.autoScrollInterval === null) {
+        carouselValues.autoScrollInterval = setInterval(() => {
+            buttonNextImage.click();
+        }, 4500);
+    }
+}
+
+function stopAutoScrollCarousel() {
+    if (carouselValues.autoScrollInterval !== null) {
+        clearInterval(carouselValues.autoScrollInterval);
+        carouselValues.autoScrollInterval = null;
+    }
+}
+
+function setupCarouselVisibilityObserver() {
+    const observerCallback = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+                startAutoScrollCarousel();
+            } else {
+                stopAutoScrollCarousel();
+            }
+        });
+    };
+
+    const observerOptions = {
+        root: null,
+        threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver(
+        observerCallback,
+        observerOptions
+    );
+
+    observer.observe(imageCarousel);
 }
