@@ -41,6 +41,7 @@ body {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 a.link-underline {
@@ -62,6 +63,7 @@ sup {
 
 a:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .text-white {
@@ -385,6 +387,7 @@ a:hover {
     height: var(--image-carousel-height);
     width: calc((100vw - (var(--image-carousel-width) + 1.875rem)) / 2);
     z-index: 5;
+    cursor: pointer;
 }
 
 .button-next-image {
@@ -394,6 +397,7 @@ a:hover {
     height: var(--image-carousel-height);
     width: calc((100vw - (var(--image-carousel-width) + 1.875rem)) / 2);
     z-index: 5;
+    cursor: pointer;
 }
 
 .image-carousel {
@@ -422,7 +426,7 @@ a:hover {
     width: var(--image-carousel-width);
     margin: 0 0.46875rem;
     z-index: 3;
-    transition: 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: background-color 1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .image-carousel-container-active .overlay-white-opaque {
@@ -498,6 +502,10 @@ a:hover {
     border: 1px solid rgb(255, 255, 255);
 }
 
+.apple-tv-stream-button:hover {
+    opacity: 0.9;
+}
+
 .carousel-navigation {
     position: relative;
     display: flex;
@@ -519,6 +527,7 @@ a:hover {
     border-radius: 0.25rem;
     background-color: rgba(0, 0, 0, 0.42);
     transition: 0.2s ease 0.5s;
+    cursor: pointer;
 }
 
 .dot.active-item {
@@ -583,6 +592,10 @@ footer > section {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+}
+
+.navigation-link-group li {
+    cursor: pointer;
 }
 
 .navigation-links h3 {
@@ -1064,6 +1077,7 @@ footer > section {
         background-color: var(--text-white);
         overflow: hidden;
         z-index: 2;
+        cursor: pointer;
     }
 
     .navigation-link-group h3 {
