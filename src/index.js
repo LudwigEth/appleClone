@@ -71,6 +71,20 @@ function dropDownSvgAnimation(dropdown, linkGroup) {
 const carouselValues = {
     firstContainer: document.getElementById('first-carousel-container'),
     autoScrollInterval: null,
+    get rootStyles() {
+        return getComputedStyle(document.documentElement);
+    },
+    get scrollDistance() {
+        return parseFloat(
+            this.rootStyles.getPropertyValue('--scroll-distance').trim()
+        );
+    },
+    set scrollDistance(distance) {
+        document.documentElement.style.setProperty(
+            '--scroll-distance',
+            distance + 'px'
+        );
+    },
     get carouselItems() {
         return imageCarousel.querySelectorAll('.carousel-item-container');
     },
