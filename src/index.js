@@ -104,8 +104,10 @@ const carouselValues = {
         return imageCarousel.querySelector('.image-carousel-container-active');
     },
     get activeContainerIndex() {
-        return imageCarousel.querySelector('.image-carousel-container-active')
-            .dataset.index;
+        return parseFloat(
+            imageCarousel.querySelector('.image-carousel-container-active')
+                .dataset.index
+        );
     },
 };
 
