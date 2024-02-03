@@ -212,6 +212,7 @@ function imageCarouselClickHandler(e) {
         const index = parseFloat(e.target.dataset.index);
         handleDotClick(index, e);
     }
+    stopAutoScrollCarousel();
 }
 
 function debounceCarouselClickHandler() {
@@ -262,7 +263,9 @@ function handleDotClick(index, e) {
 function startAutoScrollCarousel() {
     if (carouselValues.autoScrollInterval === null) {
         carouselValues.autoScrollInterval = setInterval(() => {
-            buttonNextImage.click();
+            debounceCarouselClickHandler();
+            scrollImageCarousel('right');
+            handleScrollToRight();
         }, 4500);
     }
 }
