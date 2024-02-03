@@ -413,22 +413,6 @@ a:hover {
     transition: 1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.gradient-overlay-dark {
-    height: var(--image-carousel-height);
-    width: var(--image-carousel-width);
-    margin: 0 0.46875rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0);
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0) 50%,
-        rgba(0, 0, 0, 0.7));
-    background-size: auto;
-    background-repeat: repeat;
-    z-index: 2;
-}
-
 .overlay-white-opaque {
     position: absolute;
     top: 0;
@@ -499,9 +483,12 @@ a:hover {
 
 .apple-tv-stream-button {
     font-size: var(--font-tv-button);
+    text-wrap: nowrap;
+    text-align: center;
+    line-height: 1.25rem;
     font-weight: 525;
     padding: 0.6875rem 1.3125rem;
-    min-width: 1.75rem;
+    min-width: fit-content;
     background-color: rgb(255, 255, 255);
     border-radius: 42.69rem;
     border: 1px solid rgb(255, 255, 255);
@@ -774,6 +761,27 @@ footer > section {
         justify-content: space-between;
         align-items: center;
         margin: 0 0.46875rem;
+    }
+
+    .gradient-overlay-dark {
+        height: var(--image-carousel-height);
+        width: var(--image-carousel-width);
+        margin: 0 0.46875rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0);
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0) 50%,
+            rgba(0, 0, 0, 0.7));
+        background-size: auto;
+        background-repeat: repeat;
+        z-index: 2;
+    }
+
+    .apple-tv-text-wrapper {
+        line-height: 1.25rem;
+        text-align: center;
     }
 
     .carousel-item-info-bottom {
