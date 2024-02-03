@@ -438,6 +438,10 @@ a:hover {
     width: var(--image-carousel-width);
 }
 
+.apple-tv-text-wrapper {
+    text-shadow: rgba(0, 0, 0, 0.6) 0px 0px 5px;
+}
+
 .carousel-item-info-top {
     display: flex;
     flex-direction: column;
