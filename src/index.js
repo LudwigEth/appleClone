@@ -28,10 +28,15 @@ function initializeEventListeners() {
     window.addEventListener('resize', setInitialScrollPosition);
     window.addEventListener('resize', debouncedAdjustCarousel);
     window.addEventListener('resize', stopAutoScrollCarousel);
+    window.addEventListener('resize', removeAppleTvAnimation);
 }
 
 function initialPageLoadFunctions() {
     setInitialScrollPosition();
+}
+
+function removeAppleTvAnimation() {
+    appleTvSection.classList.add('no-animation');
 }
 
 // handles the animation for the dropdown expand or collapse svg indicator in small vw
