@@ -1783,3 +1783,68 @@ footer > section {
         background-image: url('./assets/images/promo-images/iphone-15-large-tall.jpg');
     }
 }
+
+@media (min-width: 1441px) {
+    :root {
+        --font-tv-text: 1.25rem;
+        --font-tv-button: 0.875rem;
+        --image-carousel-height: 41.75rem;
+        --image-carousel-width: 78.125rem;
+        --carousel-item-info-margin: 0 0 3.125rem 0;
+    }
+
+    #carousel-item-9-copy {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-9-background-large.jpg);
+    }
+
+    #carousel-item-10-copy {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-10-background-large.jpg);
+    }
+
+    #carousel-item-1 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-1-background-large.jpg);
+    }
+
+    #carousel-item-2 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-2-background-large.jpg);
+    }
+
+    #carousel-item-3 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-3-background-large.jpg);
+    }
+    #carousel-item-4 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-4-background-large.jpg);
+    }
+
+    #carousel-item-5 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-5-background-large.jpg);
+    }
+
+    #carousel-item-6 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-6-background-large.jpg);
+    }
+
+    #carousel-item-7 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-7-background-large.jpg);
+    }
+
+    #carousel-item-8 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-8-background-large.jpg);
+    }
+
+    #carousel-item-9 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-9-background-large.jpg);
+    }
+
+    #carousel-item-10 {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-10-background-large.jpg);
+    }
+
+    #carousel-item-1-copy {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-1-background-large.jpg);
+    }
+
+    #carousel-item-2-copy {
+        background-image: url(./assets/images/apple-tv-images/apple-tv-item-2-background-large.jpg);
+    }
+}
