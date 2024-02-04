@@ -1057,7 +1057,7 @@ footer > section {
         height: 0.1rem;
         width: 1.1rem;
         stroke: rgba(255, 255, 255, 0.8);
-        transition: 0.32s strok cubic-bezier(0.4, 0, 0.6, 1);
+        transition: 0.32s stroke cubic-bezier(0.4, 0, 0.6, 1);
     }
 
     .hamburger-bun {
