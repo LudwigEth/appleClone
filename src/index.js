@@ -36,6 +36,9 @@ function initializeEventListeners() {
     window.addEventListener('resize', debouncedAdjustCarousel)
     window.addEventListener('resize', stopAutoScrollCarousel)
     window.addEventListener('resize', removeAppleTvAnimation)
+    searchIcon.addEventListener('click', toggleSearchVisibility)
+    shoppingbagIcon.addEventListener('click', toggleShoppingbagVisibility)
+    hamburgerMenu.addEventListener('click', hamburgerMenuHandler)
 }
 
 function initialPageLoadFunctions() {
@@ -397,7 +400,3 @@ function hamburgerMenuHandler() {
         toggleMobileMenuVisibility()
     }
 }
-
-searchIcon.addEventListener('click', toggleSearchVisibility)
-shoppingbagIcon.addEventListener('click', toggleShoppingbagVisibility)
-hamburgerMenu.addEventListener('click', hamburgerMenuHandler)
