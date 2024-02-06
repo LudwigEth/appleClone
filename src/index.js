@@ -3,8 +3,18 @@ import {
     buttonNextImage,
     buttonPrevImage,
     dotNavigation,
+    flyoutContainer,
+    flyoutMobile,
+    flyoutSearch,
+    flyoutSearchInput,
+    flyoutShoppingbag,
+    hamburgerMenu,
+    hamburgerMenuCheckbox,
     imageCarousel,
+    navbar,
+    searchIcon,
     sectionNavigationLinks,
+    shoppingbagIcon,
 } from './modules/domElements'
 import './styles.css'
 
@@ -336,3 +346,58 @@ function setupCarouselVisibilityObserver() {
 
     observer.observe(imageCarousel)
 }
+
+function toggleFlyoutVisibility() {
+    flyoutContainer.classList.toggle('flyout-open')
+    navbar.classList.toggle('flyout-open')
+    document.body.classList.toggle('no-scroll')
+    setTimeout(() => {
+        flyoutSearchInput.value = ''
+    }, 300)
+}
+
+function toggleShoppingbagVisibility() {
+    toggleFlyoutVisibility()
+    turnOnVisibility(flyoutShoppingbag)
+    hamburgerMenuCheckbox.checked = true
+}
+
+function toggleSearchVisibility() {
+    toggleFlyoutVisibility()
+    turnOnVisibility(flyoutSearch)
+    hamburgerMenuCheckbox.checked = true
+    setTimeout(() => {
+        flyoutSearchInput.focus()
+    }, 500)
+}
+
+function toggleMobileMenuVisibility() {
+    toggleFlyoutVisibility()
+    turnOnVisibility(flyoutMobile)
+}
+
+function turnOnVisibility(element) {
+    element.classList.remove('hidden')
+    element.classList.remove('visibility-hidden')
+    flyoutContainer.scrollTo(0, 0)
+}
+
+function hamburgerMenuHandler() {
+    if (hamburgerMenuCheckbox.checked) {
+        flyoutMobile.classList.add('visibility-hidden')
+        flyoutSearch.classList.add('visibility-hidden')
+        flyoutShoppingbag.classList.add('visibility-hidden')
+        toggleFlyoutVisibility()
+        setTimeout(() => {
+            flyoutMobile.classList.add('hidden')
+            flyoutSearch.classList.add('hidden')
+            flyoutShoppingbag.classList.add('hidden')
+        }, 300)
+    } else {
+        toggleMobileMenuVisibility()
+    }
+}
+
+searchIcon.addEventListener('click', toggleSearchVisibility)
+shoppingbagIcon.addEventListener('click', toggleShoppingbagVisibility)
+hamburgerMenu.addEventListener('click', hamburgerMenuHandler)
