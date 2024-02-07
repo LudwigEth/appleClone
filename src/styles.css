@@ -23,12 +23,15 @@
     --scroll-distance: 0px;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
 }
 
-input, button {
+input,
+button {
     max-width: 100%;
 }
 
@@ -191,18 +194,18 @@ a:hover {
 }
 
 .flyout-shoppingbag-content,
-    .flyout-search-content {
-        display: flex;
-        flex-direction: column;
-        height: fit-content;
-        max-width: 100%;
-        color: rgb(232, 232, 237);
-        font-weight: 600;
-    }
+.flyout-search-content {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    max-width: 100%;
+    color: rgb(232, 232, 237);
+    font-weight: 600;
+}
 
 .flyout-shoppingbag-content {
-        gap: 4.5rem;
-        justify-content: space-between;
+    gap: 3.75rem;
+    justify-content: space-between;
 }
 
 .flyout-search-content {
@@ -252,7 +255,7 @@ a:hover {
 }
 
 .flyout-search-content div:last-child ul li > a:hover,
-.flyout-search-content div:last-child ul li > a:hover *{
+.flyout-search-content div:last-child ul li > a:hover * {
     background-color: rgba(29, 29, 31, 0.94);
     color: rgb(255, 255, 255);
     fill: rgb(255, 255, 255);
@@ -278,7 +281,7 @@ a:hover {
     color: rgb(232, 232, 237);
 }
 
-input[type="search"]::-webkit-search-cancel-button {
+input[type='search']::-webkit-search-cancel-button {
     -webkit-appearance: none;
     appearance: none;
 }
@@ -303,6 +306,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .flyout-shoppingbag h2 {
+    padding-top: 0.075rem;
     font-size: 1.75rem;
     padding-bottom: 2rem;
 }
@@ -1192,7 +1196,6 @@ footer > section {
     .flyout-search-content div:last-child ul {
         gap: 0.25rem;
     }
-
 
     @keyframes fadeInSlideDown {
         0% {
