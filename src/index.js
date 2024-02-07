@@ -18,7 +18,12 @@ import {
 } from './modules/domElements'
 import './styles.css'
 
-document.addEventListener('DOMContentLoaded', runFunctionsAfterDomContentLoaded)
+window.addEventListener('load', removeWaitLoading)
+
+function removeWaitLoading() {
+    document.body.style.display = 'block'
+    runFunctionsAfterDomContentLoaded()
+}
 
 function runFunctionsAfterDomContentLoaded() {
     initializeEventListeners()
@@ -293,7 +298,7 @@ function startAutoScrollCarousel() {
             scrollImageCarousel('right')
             handleScrollToRight()
             appleTvSection.classList.remove('no-animation')
-        }, 4500)
+        }, 4000)
     }
 }
 
@@ -332,7 +337,7 @@ function debounce(func, wait) {
 function setupCarouselVisibilityObserver() {
     const observerCallback = (entries) => {
         entries.forEach((entry) => {
-            if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
                 startAutoScrollCarousel()
             } else {
                 stopAutoScrollCarousel()
@@ -342,7 +347,7 @@ function setupCarouselVisibilityObserver() {
 
     const observerOptions = {
         root: null,
-        threshold: 0.5,
+        threshold: 0.1,
     }
 
     const observer = new IntersectionObserver(observerCallback, observerOptions)
@@ -369,9 +374,6 @@ function toggleSearchVisibility() {
     toggleFlyoutVisibility()
     turnOnVisibility(flyoutSearch)
     hamburgerMenuCheckbox.checked = true
-    setTimeout(() => {
-        flyoutSearchInput.focus()
-    }, 500)
 }
 
 function toggleMobileMenuVisibility() {
