@@ -376,7 +376,7 @@ function toggleSearchVisibility() {
     hamburgerMenuCheckbox.checked = true
     setTimeout(() => {
         flyoutSearchInput.focus()
-    }, 690)
+    }, 450)
 }
 
 function toggleMobileMenuVisibility() {
@@ -387,7 +387,7 @@ function toggleMobileMenuVisibility() {
 function turnOnVisibility(element) {
     element.classList.remove('hidden')
     element.classList.remove('visibility-hidden')
-    flyoutContainer.scrollTo(0, 0)
+    flyoutContainer.scrollTop = 0
 }
 
 function hamburgerMenuHandler() {
