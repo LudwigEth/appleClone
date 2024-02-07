@@ -209,6 +209,11 @@ a:hover {
     fill: rgb(232, 232, 237);
 }
 
+.flyout-search form,
+.flyout-search form * {
+    font-size: 1rem;
+}
+
 .flyout-search-content h3 {
     color: rgb(110, 110, 115);
     font-weight: 400;
@@ -282,6 +287,19 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .flyout-shoppingbag h2 {
     font-size: 1.75rem;
+    padding-bottom: 2rem;
+}
+
+.flyout-shoppingbag h3 {
+    font-size: 1.0625rem;
+    font-weight: 400;
+    color: rgb(134, 134, 139);
+    text-wrap: wrap;
+}
+
+.flyout-shoppingbag h3 > a {
+    color: rgb(41, 151, 255);
+    text-decoration: underline;
 }
 
 .flyout-shoppingbag span {
@@ -805,7 +823,7 @@ footer > section {
 @media (max-width: 734px) {
     .section-promo {
         height: 35rem;
-        background-size: auto 34.25rem;
+        background-size: 45.875rem 34.25rem;
     }
 
     .section-promo .section-promo-subtitle {
