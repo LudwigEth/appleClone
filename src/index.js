@@ -365,23 +365,26 @@ function toggleFlyoutVisibility() {
 }
 
 function toggleShoppingbagVisibility() {
+    checkHamburgerMenuCheckbox()
+    if (hamburgerMenuCheckbox.checked) {
+        turnOnVisibility(flyoutShoppingbag)
+    } else {
+        hideFlyoutContent(flyoutShoppingbag)
+    }
     toggleFlyoutVisibility()
-    turnOnVisibility(flyoutShoppingbag)
-    hamburgerMenuCheckbox.checked = true
 }
 
 function toggleSearchVisibility() {
+    checkHamburgerMenuCheckbox()
+    if (hamburgerMenuCheckbox.checked) {
+        turnOnVisibility(flyoutSearch)
+        setTimeout(() => {
+            flyoutSearchInput.focus()
+        }, 450)
+    } else {
+        hideFlyoutContent(flyoutSearch)
+    }
     toggleFlyoutVisibility()
-    turnOnVisibility(flyoutSearch)
-    hamburgerMenuCheckbox.checked = true
-    setTimeout(() => {
-        flyoutSearchInput.focus()
-    }, 450)
-}
-
-function toggleMobileMenuVisibility() {
-    toggleFlyoutVisibility()
-    turnOnVisibility(flyoutMobile)
 }
 
 function turnOnVisibility(element) {
@@ -390,18 +393,28 @@ function turnOnVisibility(element) {
     flyoutContainer.scrollTop = 0
 }
 
+function hideFlyoutContent(element) {
+    element.classList.add('visibility-hidden')
+    setTimeout(() => {
+        element.classList.add('hidden')
+    }, 300)
+}
+
+function checkHamburgerMenuCheckbox() {
+    if (hamburgerMenuCheckbox.checked) {
+        hamburgerMenuCheckbox.checked = false
+    } else {
+        hamburgerMenuCheckbox.checked = true
+    }
+}
+
 function hamburgerMenuHandler() {
     if (hamburgerMenuCheckbox.checked) {
-        flyoutMobile.classList.add('visibility-hidden')
-        flyoutSearch.classList.add('visibility-hidden')
-        flyoutShoppingbag.classList.add('visibility-hidden')
-        toggleFlyoutVisibility()
-        setTimeout(() => {
-            flyoutMobile.classList.add('hidden')
-            flyoutSearch.classList.add('hidden')
-            flyoutShoppingbag.classList.add('hidden')
-        }, 300)
+        hideFlyoutContent(flyoutSearch)
+        hideFlyoutContent(flyoutMobile)
+        hideFlyoutContent(flyoutShoppingbag)
     } else {
-        toggleMobileMenuVisibility()
+        turnOnVisibility(flyoutMobile)
     }
+    toggleFlyoutVisibility()
 }
