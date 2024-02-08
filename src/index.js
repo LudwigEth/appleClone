@@ -371,7 +371,7 @@ function toggleShoppingbagVisibility() {
     if (hamburgerMenuCheckbox.checked) {
         turnOnVisibility(flyoutShoppingbag)
     } else {
-        hideFlyoutContent(flyoutShoppingbag)
+        hideFlyoutContent()
     }
     toggleFlyoutVisibility()
 }
@@ -384,7 +384,7 @@ function toggleSearchVisibility() {
             flyoutSearchInput.focus()
         }, 450)
     } else {
-        hideFlyoutContent(flyoutSearch)
+        hideFlyoutContent()
     }
     toggleFlyoutVisibility()
 }
@@ -392,14 +392,20 @@ function toggleSearchVisibility() {
 function turnOnVisibility(element) {
     element.classList.remove('hidden')
     element.classList.remove('visibility-hidden')
+    element.classList.add('flyout-active')
+    flyoutContentContainer.forEach((container) => {
+        if (!container.classList.contains('flyout-active')) {
+            container.classList.add('hidden')
+        }
+    })
     flyoutContainer.scrollTop = 0
 }
 
-function hideFlyoutContent(element) {
-    element.classList.add('visibility-hidden')
-    setTimeout(() => {
-        element.classList.add('hidden')
-    }, 300)
+function hideFlyoutContent() {
+    flyoutContentContainer.forEach((container) => {
+        container.classList.add('visibility-hidden')
+        container.classList.remove('flyout-active')
+    })
 }
 
 function checkHamburgerMenuCheckbox() {
@@ -412,9 +418,7 @@ function checkHamburgerMenuCheckbox() {
 
 function hamburgerMenuHandler() {
     if (hamburgerMenuCheckbox.checked) {
-        hideFlyoutContent(flyoutSearch)
-        hideFlyoutContent(flyoutMobile)
-        hideFlyoutContent(flyoutShoppingbag)
+        hideFlyoutContent()
     } else {
         turnOnVisibility(flyoutMobile)
     }
