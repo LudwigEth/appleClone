@@ -21,7 +21,7 @@ import './styles.css'
 window.addEventListener('load', removeWaitLoading)
 
 function removeWaitLoading() {
-    document.body.style.display = 'block'
+    document.body.style.display = 'flex'
     runFunctionsAfterDomContentLoaded()
 }
 
