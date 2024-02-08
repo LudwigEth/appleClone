@@ -355,6 +355,8 @@ function setupCarouselVisibilityObserver() {
     observer.observe(imageCarousel)
 }
 
+const flyoutContentContainer = [flyoutSearch, flyoutShoppingbag, flyoutMobile]
+
 function toggleFlyoutVisibility() {
     flyoutContainer.classList.toggle('flyout-open')
     navbar.classList.toggle('flyout-open')
