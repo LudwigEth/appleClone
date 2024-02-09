@@ -209,7 +209,6 @@ function handleScrollToRight() {
             'transitionend',
             handleScrollToFirst
         )
-        console.log('first handle left')
     }
     updateDotNavigation()
 }
@@ -225,7 +224,6 @@ function handleScrollToLeft() {
             'transitionend',
             handleScrollToLast
         )
-        console.log('first handle left')
     }
     updateDotNavigation()
 }
