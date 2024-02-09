@@ -371,6 +371,7 @@ function toggleFlyoutVisibility() {
 
 function toggleShoppingbagVisibility() {
     checkHamburgerMenuCheckbox()
+    document.documentElement.style.setProperty('--flyout-height', '400px')
     if (hamburgerMenuCheckbox.checked) {
         turnOnVisibility(flyoutShoppingbag)
     } else {
@@ -381,6 +382,7 @@ function toggleShoppingbagVisibility() {
 
 function toggleSearchVisibility() {
     checkHamburgerMenuCheckbox()
+    document.documentElement.style.setProperty('--flyout-height', '400px')
     if (hamburgerMenuCheckbox.checked) {
         turnOnVisibility(flyoutSearch)
         setTimeout(() => {
