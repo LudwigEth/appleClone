@@ -32,6 +32,7 @@ function runFunctionsAfterDomContentLoaded() {
     initializeEventListeners()
     initialPageLoadFunctions()
     setupCarouselVisibilityObserver()
+    saveNavItemFlyoutHeightIndicator()
 }
 
 function initializeEventListeners() {
@@ -47,6 +48,7 @@ function initializeEventListeners() {
     searchIcon.addEventListener('click', toggleSearchVisibility)
     shoppingbagIcon.addEventListener('click', toggleShoppingbagVisibility)
     hamburgerMenu.addEventListener('click', hamburgerMenuHandler)
+    addNavItemFlyoutListeners()
 }
 
 function initialPageLoadFunctions() {
@@ -357,6 +359,106 @@ function setupCarouselVisibilityObserver() {
 }
 
 const flyoutContentContainer = [flyoutSearch, flyoutShoppingbag, flyoutMobile]
+flyoutContentContainer.push(...Array.from(flyoutItems))
+
+function addNavItemFlyoutListeners() {
+    navItems.forEach((navItem, index) => {
+        navItem.addEventListener('mouseenter', () =>
+            toggleFlyoutItemVisibility(flyoutItems[index])
+        )
+    })
+    flyoutContainer.addEventListener('mouseleave', flyoutClose)
+    appleIcon.addEventListener('mouseenter', flyoutClose)
+}
+
+function flyoutClose() {
+    if (window.innerWidth > 833) {
+        hideFlyoutContent()
+        flyoutContainer.classList.remove('flyout-open')
+        navbar.classList.remove('flyout-open')
+        hamburgerMenuCheckbox.checked = false
+        document.body.classList.remove('no-scroll')
+    }
+}
+
+function flyoutOpen() {
+    flyoutContainer.classList.add('flyout-open')
+    navbar.classList.add('flyout-open')
+    hamburgerMenuCheckbox.checked = true
+}
+
+function toggleFlyoutItemVisibility(flyout) {
+    flyoutOpen()
+    hideFlyoutContent()
+    turnOnVisibility(flyout)
+    adjustFlyoutContainerHeight()
+}
+
+function saveNavItemFlyoutHeightIndicator() {
+    flyoutItems.forEach((item) => {
+        let mainLiCount = 0
+        let subLiCount = 0
+        if (
+            item.firstChild.querySelector('div') &&
+            item.firstChild.querySelector('div').children
+        ) {
+            mainLiCount +=
+                item.firstChild.querySelector('div').children.length / 2
+        }
+        const unorderedLists = item.querySelectorAll('ul')
+        unorderedLists.forEach((ul, index) => {
+            let itemCount = ul.querySelectorAll('li').length
+            if (index === 0) {
+                mainLiCount += itemCount
+            } else {
+                if (itemCount / 2 > subLiCount) {
+                    subLiCount = itemCount / 2
+                }
+            }
+        })
+        if (mainLiCount > subLiCount) {
+            item.setAttribute(
+                'data-flyout-height',
+                calculateFlyoutHeight(mainLiCount)
+            )
+        } else {
+            item.setAttribute(
+                'data-flyout-height',
+                calculateFlyoutHeight(subLiCount)
+            )
+        }
+    })
+}
+
+function calculateFlyoutHeight(listItemNumber) {
+    const rootStyles = getComputedStyle(document.documentElement)
+    const verticalPadding =
+        parseFloat(
+            rootStyles.getPropertyValue('--flyout-open-padding-vertical').trim()
+        ) * 1.5
+    const flyoutFontLarge =
+        parseFloat(rootStyles.getPropertyValue('--flyout-font-large').trim()) *
+        16
+    const totalRowGapValue = Math.ceil(listItemNumber - 1) / 2
+    const flyoutLinkHeading = 1
+
+    return (
+        (verticalPadding +
+            flyoutLinkHeading +
+            totalRowGapValue +
+            listItemNumber) *
+        flyoutFontLarge
+    )
+}
+
+function adjustFlyoutContainerHeight() {
+    const activeFlyout = flyoutContainer.querySelector('.flyout-active')
+    const newContainerHeight = activeFlyout.getAttribute('data-flyout-height')
+    document.documentElement.style.setProperty(
+        '--flyout-height',
+        newContainerHeight + 'px'
+    )
+}
 
 function toggleFlyoutVisibility() {
     flyoutContainer.classList.toggle('flyout-open')
