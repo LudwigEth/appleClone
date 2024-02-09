@@ -1294,6 +1294,10 @@ footer > section {
         padding: 3rem 3rem 0;
     }
 
+    .flyout-mobile ul {
+        flex: 1;
+    }
+
     .navbar.flyout-open,
     .flyout-mobile > .flyout-mobile-item-list li span:first-child {
         opacity: 0;
