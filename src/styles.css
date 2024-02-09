@@ -24,6 +24,7 @@
     --flyout-height: 32rem;
     --flyout-font-large: 1.5rem;
     --flyout-font-small: 0.75rem;
+    --flyout-open-padding-vertical: 5.5rem;
 }
 
 *,
