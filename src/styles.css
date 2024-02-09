@@ -1058,6 +1058,27 @@ footer > section {
         margin: 0 0.46875rem;
     }
 
+    .button-prev-image::after {
+        position: absolute;
+        content: '\f054';
+        top: calc(50% - 1rem);
+        left: 50%;
+        transform: rotate(180deg);
+        font-size: 1.375rem;
+        font-family: 'FontAwesome';
+        color: rgba(0, 0, 0, 0.56);
+    }
+
+    .button-next-image::after {
+        position: absolute;
+        content: '\f054';
+        top: calc(50% - 1rem);
+        left: 50%;
+        font-size: 1.375rem;
+        font-family: 'FontAwesome';
+        color: rgba(0, 0, 0, 0.56);
+    }
+
     .gradient-overlay-dark {
         height: var(--image-carousel-height);
         width: var(--image-carousel-width);
