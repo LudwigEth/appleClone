@@ -58,6 +58,7 @@ section {
 a {
     text-decoration: none;
     color: inherit;
+    transition: color 0.24s ease;
 }
 
 a.link-underline {
@@ -189,20 +190,29 @@ a:hover {
     display: flex;
     max-width: 61.25rem !important;
     margin: 0 auto;
-    padding-bottom: 4rem;
 }
 
 .flyout-item {
     display: flex;
-    gap: 3rem;
+    gap: 6rem;
     font-size: var(--flyout-font-small);
     font-weight: 600;
     color: rgb(232, 232, 237);
 }
 
+.flyout-links-subgroup-container {
+    display: flex;
+    gap: 3rem;
+}
+
 .flyout-item h2 {
     color: rgb(134, 134, 139);
     font-weight: 400;
+}
+
+.flyout-item a:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 }
 
 .flyout-item .flyout-links-maingroup,
@@ -220,7 +230,12 @@ a:hover {
     gap: 0.75rem;
 }
 
-.flyout-item .flyout-links-maingroup ul,
+.flyout-item .flyout-links-maingroup ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .flyout-item .flyout-links-subgroup ul {
     display: flex;
     flex-direction: column;
@@ -233,17 +248,25 @@ a:hover {
 
 .flyout-container.flyout-open {
     height: var(--flyout-height);
-    padding-top: 5.5rem;
+    padding-top: var(--flyout-open-padding-vertical);
     background-color: rgba(22, 22, 23, 1);
     overflow-y: scroll;
 }
 
-.flyout-container > div {
+.flyout-container > div:not(.flyout-item) {
     animation: fadeOutSlideUp 0.5s forwards;
 }
 
-.flyout-container.flyout-open > div {
+.flyout-container.flyout-open > div:not(.flyout-item) {
     animation: fadeInSlideDown 0.5s forwards;
+}
+
+.flyout-container > div.flyout-item {
+    opacity: 0;
+}
+
+.flyout-container.flyout-open > div.flyout-item {
+    opacity: 1;
 }
 
 .flyout-shoppingbag-content,
