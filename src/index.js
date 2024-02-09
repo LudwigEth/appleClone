@@ -399,6 +399,7 @@ function turnOnVisibility(element) {
     flyoutContentContainer.forEach((container) => {
         if (!container.classList.contains('flyout-active')) {
             container.classList.add('hidden')
+            container.classList.add('visibility-hidden')
         }
     })
     flyoutContainer.scrollTop = 0
