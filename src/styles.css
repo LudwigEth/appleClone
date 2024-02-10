@@ -1305,6 +1305,38 @@ footer > section {
         padding: 3rem 3rem 0;
     }
 
+    .flyout-item {
+        padding-top: 0.75rem;
+        padding-bottom: 5.75rem;
+        gap: 3.75rem;
+    }
+
+    .flyout-open .flyout-item ul {
+        gap: 1.125rem;
+    }
+
+    .flyout-item,
+    .flyout-links-subgroup-container {
+        flex-direction: column;
+    }
+
+    .flyout-links-maingroup > h2 {
+        display: none;
+    }
+
+    .flyout-open .flyout-links-maingroup > div {
+        padding-top: 0.75rem;
+        gap: 1.125rem;
+    }
+
+    .flyout-open .flyout-links-subgroup-container {
+        gap: 3.75rem;
+    }
+
+    .flyout-open .flyout-links-subgroup {
+        gap: 1.75rem;
+    }
+
     .header *,
     .flyout-mobile * {
         -webkit-tap-highlight-color: transparent;
