@@ -530,3 +530,13 @@ function hamburgerMenuHandler() {
     }
     toggleFlyoutVisibility()
 }
+
+function addAscendingDelay(nodelist, delayMs) {
+    nodelist.forEach((item, index) => {
+        let addedDelay = delayMs * index
+        if (index === 0) {
+            addedDelay = delayMs / 2
+        }
+        item.style.setProperty('--delay', addedDelay + 'ms')
+    })
+}
