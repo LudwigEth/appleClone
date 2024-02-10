@@ -466,7 +466,14 @@ function adjustFlyoutContainerHeight() {
 function toggleFlyoutVisibility() {
     flyoutContainer.classList.toggle('flyout-open')
     navbar.classList.toggle('flyout-open')
-    document.body.classList.toggle('no-scroll')
+    if (
+        window.innerWidth < 833 &&
+        flyoutContainer.classList.contains('flyout-open')
+    ) {
+        document.body.classList.add('no-scroll')
+    } else {
+        document.body.classList.remove('no-scroll')
+    }
     setTimeout(() => {
         flyoutSearchInput.value = ''
     }, 300)
