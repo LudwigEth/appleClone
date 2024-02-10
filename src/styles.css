@@ -171,6 +171,10 @@ a:hover {
 
 /* navbar flyout */
 
+.mobile-navigation-back {
+    display: none;
+ }
+
 .flyout-container {
     position: absolute;
     top: 0;
@@ -1418,6 +1422,31 @@ footer > section {
 
     .flyout-shoppingbag-navigation ul li svg {
         height: 1.5625rem;
+     }
+
+     .mobile-navigation-back {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 3rem;
+        height: 3rem;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+     }
+
+     .mobile-navigation-back.active {
+        display: flex;
+     }
+
+     .mobile-navigation-back span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+
+     .mobile-navigation-back svg {
+        fill: rgb(232, 232, 237);
      }
 
     .container-menu {
