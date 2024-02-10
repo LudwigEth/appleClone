@@ -1306,9 +1306,17 @@ footer > section {
     }
 
     .flyout-item {
-        padding-top: 0.75rem;
-        padding-bottom: 5.75rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 3.625rem 3rem 5.75rem;
         gap: 3.75rem;
+        animation: fadeOutToLeft 0.5s forwards;
+        transition: visibility 0s linear 0.5s;
+    }
+
+    .flyout-item.active {
+        animation: fadeInFromRight 0.5s forwards;
     }
 
     .flyout-open .flyout-item ul {
@@ -1405,6 +1413,10 @@ footer > section {
         padding-bottom: 5.25rem;
     }
 
+    .flyout-mobile.navigatedBack {
+        animation: fadeInFromLeft 0.5s forwards;
+    }
+
     .flyout-mobile > .flyout-mobile-item-list li span:first-child {
         opacity: 1;
         visibility: visible;
@@ -1475,6 +1487,7 @@ footer > section {
 
      .mobile-navigation-back.active {
         display: flex;
+        animation: fadeInFromRight 0.5s forwards;
      }
 
      .mobile-navigation-back span {
@@ -2450,14 +2463,29 @@ footer > section {
     }
 }
 
+.fadeInFromRight {
+    animation: fadeInFromRight 0.5s forwards;
+}
+
+@keyframes fadeInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(0.5rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 .fadeInFromLeft {
-    animation: fadeInFromLeft 0.25s forwards;
+    animation: fadeInFromLeft 0.5s forwards;
 }
 
 @keyframes fadeInFromLeft {
     0% {
         opacity: 0;
-        transform: translateX(-0.75rem);
+        transform: translateX(-0.5rem);
     }
     100% {
         opacity: 1;
@@ -2466,7 +2494,7 @@ footer > section {
 }
 
 .fadeOutToLeft {
-    animation: fadeOutToLeft 0.25s forwards;
+    animation: fadeOutToLeft 0.5s forwards;
 }
 
 @keyframes fadeOutToLeft {
@@ -2476,6 +2504,21 @@ footer > section {
     }
     100% {
         opacity: 0;
-        transform: translateX(-0.75rem);
+        transform: translateX(-0.5rem);
+    }
+}
+
+.fadeOutToRight {
+    animation: fadeOutToRight 0.5s forwards;
+}
+
+@keyframes fadeOutToRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(0.5rem);
     }
 }
