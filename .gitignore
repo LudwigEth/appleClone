@@ -94,7 +94,6 @@ out
 .tern-port
 
 # Webpack bundle output
-/dist
 
 # dotenv environment variables file
 .env.local
