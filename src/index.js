@@ -13,6 +13,7 @@ import {
     hamburgerMenu,
     hamburgerMenuCheckbox,
     imageCarousel,
+    mobileBackNavigation,
     navItems,
     navbar,
     searchIcon,
@@ -34,6 +35,7 @@ function runFunctionsAfterDomContentLoaded() {
     setupCarouselVisibilityObserver()
     saveNavItemFlyoutHeightIndicator()
     addInlineStyles()
+    addFlyoutMobileItemsClickListeners()
 }
 
 function initializeEventListeners() {
@@ -530,6 +532,7 @@ function hamburgerMenuHandler() {
         turnOnVisibility(flyoutMobile)
     }
     toggleFlyoutVisibility()
+    mobileBackNavigation.classList.remove('active')
 }
 
 function addAscendingDelay(nodelist, delayMs) {
@@ -541,4 +544,41 @@ function addAscendingDelay(nodelist, delayMs) {
 
 function addInlineStyles() {
     addAscendingDelay(flyoutMobile.querySelectorAll('.flyout-mobile-item'), 40)
+}
+
+function addFlyoutMobileItemsClickListeners() {
+    const mobileItems = flyoutMobile.querySelectorAll('.flyout-mobile-item')
+    mobileItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            mobileItemToFlyoutItem(flyoutItems[index])
+            mobileBackNavigation.classList.add('active')
+        })
+    })
+    mobileBackNavigation.addEventListener(
+        'click',
+        mobileItemBackNavigationHandler
+    )
+}
+
+function mobileItemToFlyoutItem(flyoutItem) {
+    if (window.innerWidth < 833) {
+        flyoutMobile.classList.remove('flyout-active')
+        flyoutItem.classList.add('fadeInFromRight')
+        flyoutItem.classList.add('active')
+        flyoutItem.classList.add('flyout-active')
+        flyoutItem.classList.remove('hidden')
+        flyoutItem.classList.remove('visibility-hidden')
+        turnOnVisibility(flyoutItem)
+    }
+}
+
+function mobileItemBackNavigationHandler() {
+    flyoutItems.forEach((item) => {
+        item.classList.add('visibility-hidden')
+        item.classList.add('hidden')
+        item.classList.remove('active')
+    })
+    mobileBackNavigation.classList.remove('active')
+    flyoutMobile.classList.add('navigatedBack')
+    turnOnVisibility(flyoutMobile)
 }

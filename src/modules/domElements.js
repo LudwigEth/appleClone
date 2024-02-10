@@ -21,3 +21,6 @@ export const flyoutSearchInput = document.getElementById('flyout-search-input')
 export const navItems = document.querySelectorAll('.nav-item')
 export const flyoutItems = document.querySelectorAll('.flyout-item')
 export const appleIcon = document.getElementById('apple-icon')
+export const mobileBackNavigation = document.getElementById(
+    'mobile-navigation-back'
+)
