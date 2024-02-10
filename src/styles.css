@@ -2450,6 +2450,10 @@ footer > section {
     }
 }
 
+.fadeInFromLeft {
+    animation: fadeInFromLeft 0.25s forwards;
+}
+
 @keyframes fadeInFromLeft {
     0% {
         opacity: 0;
@@ -2459,6 +2463,10 @@ footer > section {
         opacity: 1;
         transform: translateX(0px);
     }
+}
+
+.fadeOutToLeft {
+    animation: fadeOutToLeft 0.25s forwards;
 }
 
 @keyframes fadeOutToLeft {
