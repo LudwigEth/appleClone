@@ -33,6 +33,7 @@ function runFunctionsAfterDomContentLoaded() {
     initialPageLoadFunctions()
     setupCarouselVisibilityObserver()
     saveNavItemFlyoutHeightIndicator()
+    addInlineStyles()
 }
 
 function initializeEventListeners() {
@@ -533,10 +534,11 @@ function hamburgerMenuHandler() {
 
 function addAscendingDelay(nodelist, delayMs) {
     nodelist.forEach((item, index) => {
-        let addedDelay = delayMs * index
-        if (index === 0) {
-            addedDelay = delayMs / 2
-        }
+        let addedDelay = delayMs * (index + 1)
         item.style.setProperty('--delay', addedDelay + 'ms')
     })
+}
+
+function addInlineStyles() {
+    addAscendingDelay(flyoutMobile.querySelectorAll('.flyout-mobile-item'), 40)
 }
