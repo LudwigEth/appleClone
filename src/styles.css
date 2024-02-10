@@ -1295,6 +1295,7 @@ footer > section {
         padding: 3rem 3rem 0;
     }
 
+    .header *,
     .flyout-mobile * {
         -webkit-tap-highlight-color: transparent;
     }
