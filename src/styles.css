@@ -920,6 +920,12 @@ footer > section {
 
 /* media queries */
 
+@media (min-width: 640px) {
+    .flyout-open .flyout-item .flyout-links-subgroup-container {
+        flex-direction: row;
+    }
+}
+
 @media (max-width: 734px) {
     .section-promo {
         height: 35rem;
