@@ -189,12 +189,16 @@ a:hover {
     transition: 0.4s cubic-bezier(0.4, 0, 0.6, 1);
 }
 
-.flyout-container > div {
+.flyout-container > div:not(.flyout-mobile) {
     flex: 1;
     font-size: var(--flyout-font-small);
     display: flex;
     max-width: 61.25rem !important;
     margin: 0 auto;
+}
+
+.flyout-mobile {
+    display: none;
 }
 
 .flyout-item {
