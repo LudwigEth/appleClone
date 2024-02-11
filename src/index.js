@@ -513,6 +513,8 @@ function toggleSearchVisibility() {
 function turnOnVisibility(element) {
     element.classList.remove('hidden')
     element.classList.remove('visibility-hidden')
+    element.classList.remove('fadeInFromRight')
+    element.classList.remove('fadeInFromLeft')
     element.classList.add('flyout-active')
     flyoutContentContainer.forEach((container) => {
         if (!container.classList.contains('flyout-active')) {
