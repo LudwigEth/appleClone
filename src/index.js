@@ -23,6 +23,7 @@ import {
 import './styles.css'
 
 window.addEventListener('load', removeWaitLoading)
+document.addEventListener('mouseleave', flyoutClose)
 
 function removeWaitLoading() {
     document.body.style.display = 'flex'
