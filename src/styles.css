@@ -1661,7 +1661,7 @@ footer > section {
     .navigation-link-group.dropdown-expanded ul {
         position: relative;
         display: flex;
-        animation: appearOnDropDown 0.8s ease forwards;
+        animation: appearOnDropDown 0.32s ease forwards;
         z-index: 1;
     }
 
