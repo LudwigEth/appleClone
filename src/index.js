@@ -378,6 +378,7 @@ function flyoutClose() {
     if (window.innerWidth > 833) {
         hideFlyoutContent()
         flyoutContainer.classList.remove('flyout-open')
+        flyoutContainer.classList.add('flyout-closed')
         navbar.classList.remove('flyout-open')
         hamburgerMenuCheckbox.checked = false
         document.body.classList.remove('no-scroll')
@@ -385,6 +386,7 @@ function flyoutClose() {
 }
 
 function flyoutOpen() {
+    flyoutContainer.classList.remove('flyout-closed')
     flyoutContainer.classList.add('flyout-open')
     navbar.classList.add('flyout-open')
     hamburgerMenuCheckbox.checked = true
@@ -484,8 +486,10 @@ function toggleShoppingbagVisibility() {
     document.documentElement.style.setProperty('--flyout-height', '400px')
     if (hamburgerMenuCheckbox.checked) {
         turnOnVisibility(flyoutShoppingbag)
+        flyoutContainer.classList.remove('flyout-closed')
     } else {
         hideFlyoutContent()
+        flyoutContainer.classList.add('flyout-closed')
     }
     toggleFlyoutVisibility()
 }
@@ -494,11 +498,13 @@ function toggleSearchVisibility() {
     checkHamburgerMenuCheckbox()
     document.documentElement.style.setProperty('--flyout-height', '400px')
     if (hamburgerMenuCheckbox.checked) {
+        flyoutContainer.classList.remove('flyout-closed')
         turnOnVisibility(flyoutSearch)
         setTimeout(() => {
             flyoutSearchInput.focus()
         }, 450)
     } else {
+        flyoutContainer.classList.add('flyout-closed')
         hideFlyoutContent()
     }
     toggleFlyoutVisibility()
