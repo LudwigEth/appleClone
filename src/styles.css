@@ -41,7 +41,7 @@ button {
 }
 
 body {
-    min-height: 100vh;
+    min-height: 100dvh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -184,6 +184,7 @@ a:hover {
     background-color: rgba(22, 22, 23, 0.8);
     backdrop-filter: blur(1rem) saturate(1.8);
     height: 2.75rem;
+    max-height: 2.75rem;
     width: 100%;
     z-index: 1;
     transition: 0.4s cubic-bezier(0.4, 0, 0.6, 1);
@@ -257,6 +258,7 @@ a:hover {
 
 .flyout-container.flyout-open {
     height: var(--flyout-height);
+    max-height: 60dvh;
     padding-top: var(--flyout-open-padding-vertical);
     background-color: rgba(22, 22, 23, 1);
     overflow-y: scroll;
@@ -1305,7 +1307,8 @@ footer > section {
     }
 
     .flyout-container.flyout-open {
-        height: 100vh;
+        height: 100dvh;
+        max-height: 100dvh;
         padding: 3rem 3rem 0;
     }
 
