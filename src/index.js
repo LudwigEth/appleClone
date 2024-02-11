@@ -585,12 +585,12 @@ function mobileItemToFlyoutItem(flyoutItem) {
         flyoutMobile.classList.remove('flyout-active')
         flyoutMobile.classList.remove('navigatedBack')
         setTimeout(() => {
+            turnOnVisibility(flyoutItem)
             flyoutItem.classList.add('fadeInFromRight')
             flyoutItem.classList.add('active')
             flyoutItem.classList.add('flyout-active')
             flyoutItem.classList.remove('hidden')
             flyoutItem.classList.remove('visibility-hidden')
-            turnOnVisibility(flyoutItem)
         }, 200)
     }
 }
