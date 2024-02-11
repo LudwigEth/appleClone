@@ -2475,6 +2475,10 @@ footer > section {
     }
 }
 
+.fadeOutSlideUp {
+    animation: fadeOutSlideUp 0.5s forwards;
+}
+
 @keyframes fadeOutSlideUp {
     0% {
         transform: translateY(0px);
