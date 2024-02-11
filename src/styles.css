@@ -628,6 +628,10 @@ input[type='search']::-webkit-search-cancel-button {
     line-height: 1.4375rem;
 }
 
+.grid-item:nth-child(2) .grid-item-subtitle {
+    word-spacing: -0.0625rem;
+}
+
 .grid-item-link-group > a {
     font-size: 1.0625rem;
     color: var(--link-color-blue1);
