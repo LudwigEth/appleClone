@@ -570,22 +570,29 @@ function addFlyoutMobileItemsClickListeners() {
 function mobileItemToFlyoutItem(flyoutItem) {
     if (window.innerWidth < 833) {
         flyoutMobile.classList.remove('flyout-active')
-        flyoutItem.classList.add('fadeInFromRight')
-        flyoutItem.classList.add('active')
-        flyoutItem.classList.add('flyout-active')
-        flyoutItem.classList.remove('hidden')
-        flyoutItem.classList.remove('visibility-hidden')
-        turnOnVisibility(flyoutItem)
+        flyoutMobile.classList.remove('navigatedBack')
+        setTimeout(() => {
+            flyoutItem.classList.add('fadeInFromRight')
+            flyoutItem.classList.add('active')
+            flyoutItem.classList.add('flyout-active')
+            flyoutItem.classList.remove('hidden')
+            flyoutItem.classList.remove('visibility-hidden')
+            turnOnVisibility(flyoutItem)
+        }, 200)
     }
 }
 
 function mobileItemBackNavigationHandler() {
     flyoutItems.forEach((item) => {
-        item.classList.add('visibility-hidden')
-        item.classList.add('hidden')
+        item.classList.remove('fadeInFromRight')
         item.classList.remove('active')
+        setTimeout(() => {
+            item.classList.add('visibility-hidden')
+            item.classList.add('hidden')
+            turnOnVisibility(flyoutMobile)
+        }, 200)
     })
     mobileBackNavigation.classList.remove('active')
+    mobileBackNavigation.classList.add('navigatedBack')
     flyoutMobile.classList.add('navigatedBack')
-    turnOnVisibility(flyoutMobile)
 }
