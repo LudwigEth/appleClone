@@ -262,7 +262,7 @@ a:hover {
     overflow-y: scroll;
 }
 
-.flyout-container > div:not(.flyout-item):not(.flyout-mobile) {
+.flyout-container.flyout-closed > div {
     animation: fadeOutSlideUp 0.5s forwards;
 }
 
