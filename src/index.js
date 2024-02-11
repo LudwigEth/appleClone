@@ -543,10 +543,14 @@ function checkHamburgerMenuCheckbox() {
 function hamburgerMenuHandler() {
     if (hamburgerMenuCheckbox.checked) {
         hideFlyoutContent()
+        flyoutContainer.classList.add('flyout-closed')
+        flyoutMobile.classList.remove('navigatedBack')
     } else {
+        flyoutContainer.classList.remove('flyout-closed')
         turnOnVisibility(flyoutMobile)
     }
     toggleFlyoutVisibility()
+    mobileBackNavigation.classList.add('hidden')
     mobileBackNavigation.classList.remove('active')
 }
 
@@ -567,6 +571,7 @@ function addFlyoutMobileItemsClickListeners() {
         item.addEventListener('click', () => {
             mobileItemToFlyoutItem(flyoutItems[index])
             mobileBackNavigation.classList.add('active')
+            mobileBackNavigation.classList.remove('hidden')
         })
     })
     mobileBackNavigation.addEventListener(
