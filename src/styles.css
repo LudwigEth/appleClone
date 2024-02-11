@@ -1311,12 +1311,15 @@ footer > section {
         left: 0;
         padding: 3.625rem 3rem 5.75rem;
         gap: 3.75rem;
-        animation: fadeOutToLeft 0.5s forwards;
-        transition: visibility 0s linear 0.5s;
+        transition: visibility 0s linear 0.4s;
+    }
+
+    .flyout-item:not(.active) {
+        animation: fadeOutToRight 0.2s linear forwards;
     }
 
     .flyout-item.active {
-        animation: fadeInFromRight 0.5s forwards;
+        animation: fadeInFromRight 0.2s linear forwards;
     }
 
     .flyout-open .flyout-item ul {
@@ -1348,6 +1351,10 @@ footer > section {
     .header *,
     .flyout-mobile * {
         -webkit-tap-highlight-color: transparent;
+    }
+
+    .flyout-mobile:not(.flyout-active) {
+        animation: fadeOutToLeft 0.2s linear forwards;
     }
 
     .flyout-mobile ul {
@@ -1413,8 +1420,12 @@ footer > section {
         padding-bottom: 5.25rem;
     }
 
+    .flyout-mobile:not(.flyout-active) {
+        animation: fadeOutToLeft 0.2s linear forwards;
+    }
+
     .flyout-mobile.navigatedBack {
-        animation: fadeInFromLeft 0.5s forwards;
+        animation: fadeInFromLeft 0.2s linear forwards;
     }
 
     .flyout-mobile > .flyout-mobile-item-list li span:first-child {
@@ -1485,9 +1496,14 @@ footer > section {
         z-index: 2;
      }
 
+     .mobile-navigation-back.navigatedBack {
+        display: flex;
+        animation: slightFadeOutToRight 0.2s linear forwards;
+     }
+
      .mobile-navigation-back.active {
         display: flex;
-        animation: fadeInFromRight 0.5s forwards;
+        animation: slightFadeInFromRight 0.42s linear forwards;
      }
 
      .mobile-navigation-back span {
@@ -1634,7 +1650,7 @@ footer > section {
     .navigation-link-group.dropdown-expanded ul {
         position: relative;
         display: flex;
-        animation: appearOnDropDown 0.3s ease forwards;
+        animation: appearOnDropDown 0.8s ease forwards;
         z-index: 1;
     }
 
@@ -2464,13 +2480,24 @@ footer > section {
 }
 
 .fadeInFromRight {
-    animation: fadeInFromRight 0.5s forwards;
+    animation: fadeInFromRight 0.2s linear forwards;
 }
 
 @keyframes fadeInFromRight {
     0% {
         opacity: 0;
-        transform: translateX(0.5rem);
+        transform: translateX(0.75rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slightFadeInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(0.125rem);
     }
     100% {
         opacity: 1;
@@ -2479,13 +2506,24 @@ footer > section {
 }
 
 .fadeInFromLeft {
-    animation: fadeInFromLeft 0.5s forwards;
+    animation: fadeInFromLeft 0.2s linear forwards;
 }
 
 @keyframes fadeInFromLeft {
     0% {
         opacity: 0;
-        transform: translateX(-0.5rem);
+        transform: translateX(-0.75rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slightFadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-0.125rem);
     }
     100% {
         opacity: 1;
@@ -2494,7 +2532,7 @@ footer > section {
 }
 
 .fadeOutToLeft {
-    animation: fadeOutToLeft 0.5s forwards;
+    animation: fadeOutToLeft 0.2s linear forwards;
 }
 
 @keyframes fadeOutToLeft {
@@ -2504,12 +2542,23 @@ footer > section {
     }
     100% {
         opacity: 0;
-        transform: translateX(-0.5rem);
+        transform: translateX(-0.75rem);
+    }
+}
+
+@keyframes slightFadeOutToLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-0.125rem);
     }
 }
 
 .fadeOutToRight {
-    animation: fadeOutToRight 0.5s forwards;
+    animation: fadeOutToRight 0.2s linear forwards;
 }
 
 @keyframes fadeOutToRight {
@@ -2519,6 +2568,17 @@ footer > section {
     }
     100% {
         opacity: 0;
-        transform: translateX(0.5rem);
+        transform: translateX(0.75rem);
+    }
+}
+
+@keyframes slightFadeOutToRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(0.125rem);
     }
 }
