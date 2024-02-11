@@ -1981,7 +1981,7 @@ footer > section {
 
 @media (min-width: 834px) and (max-width: 1024px) {
     .flyout-container > div {
-        margin-left: 1.375rem;
+        margin-left: 1.375rem !important;
     }
 }
 
