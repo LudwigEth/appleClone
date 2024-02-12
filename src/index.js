@@ -23,7 +23,6 @@ import {
 import './styles.css'
 
 window.addEventListener('load', removeWaitLoading)
-document.addEventListener('mouseleave', flyoutClose)
 
 function removeWaitLoading() {
     document.body.style.display = 'flex'
@@ -53,6 +52,8 @@ function initializeEventListeners() {
     shoppingbagIcon.addEventListener('click', toggleShoppingbagVisibility)
     hamburgerMenu.addEventListener('click', hamburgerMenuHandler)
     addNavItemFlyoutListeners()
+    document.addEventListener('mouseleave', flyoutClose)
+    flyoutContainer.addEventListener('wheel', closeIfOverflowScrollReachedMax)
 }
 
 function initialPageLoadFunctions() {
@@ -373,6 +374,33 @@ function addNavItemFlyoutListeners() {
     })
     flyoutContainer.addEventListener('mouseleave', flyoutClose)
     appleIcon.addEventListener('mouseenter', flyoutClose)
+}
+
+let isScrollMaxReached = false
+
+function closeIfOverflowScrollReachedMax(e) {
+    const isScrollingDown = e.deltaY > 0
+    const maxScrollTop = this.scrollHeight - this.offsetHeight
+    const isAtScrollTop = this.scrollTop === 0
+    const isAtScrollBottom = this.scrollTop >= maxScrollTop
+    if (
+        (isScrollingDown && !isAtScrollBottom) ||
+        (!isScrollingDown && !isAtScrollTop)
+    ) {
+        isScrollMaxReached = false
+    }
+    if (isScrollingDown && isAtScrollBottom && isScrollMaxReached) {
+        flyoutClose()
+    } else if (!isScrollingDown && isAtScrollTop && isScrollMaxReached) {
+        flyoutClose()
+    } else if (
+        (isScrollingDown && isAtScrollBottom) ||
+        (!isScrollingDown && isAtScrollTop)
+    ) {
+        setTimeout(() => {
+            isScrollMaxReached = true
+        }, 500)
+    }
 }
 
 function flyoutClose() {
